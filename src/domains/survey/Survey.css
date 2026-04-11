@@ -1,0 +1,244 @@
+/* ===============================
+   전체 래퍼
+=============================== */
+.survey-wrapper {
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+/* ===============================
+   히어로 영역
+=============================== */
+.survey-hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 0 0 28px 28px;
+}
+
+.survey-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.survey-hero-overlay h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.survey-hero-overlay p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ===============================
+   콘텐츠 영역
+=============================== */
+.survey-content {
+  max-width: 1800px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+/* ===============================
+   설문 카드
+=============================== */
+.survey-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 26px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 상단 포인트 바 (올리브영 감성) */
+.survey-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #2d22c5,
+    #714ade,
+    #8699ef
+  );
+}
+
+.survey-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   카드 헤더
+=============================== */
+.survey-card-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.survey-card-header p {
+  font-size: 14px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.survey-card-header strong {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* ===============================
+   액션 버튼 (결과 분석)
+=============================== */
+.survey-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.survey-admin-btn {
+  background: linear-gradient(135deg, #4c6ef5, #5f7cff);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(76, 110, 245, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.survey-admin-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(76, 110, 245, 0.45);
+}
+
+/* ===============================
+   빈 상태
+=============================== */
+.survey-empty {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  color: #9ca3af;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  margin-top: 40px;
+}
+
+/* ===============================
+   화살표 페이징
+=============================== */
+.survey-pagination-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.arrow-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+
+  background: #ffffff;
+  color: #374151;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.arrow-btn:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.arrow-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* ===============================
+   모바일 대응
+=============================== */
+@media (max-width: 480px) {
+  .survey-hero {
+    height: 200px;
+  }
+
+  .survey-hero-overlay {
+    padding-left: 24px;
+  }
+
+  .survey-hero-overlay h1 {
+    font-size: 24px;
+  }
+
+  .survey-card {
+    padding: 20px;
+  }
+
+  .survey-card-header h2 {
+    font-size: 16px;
+  }
+}
+
+/* ======================
+   번호 페이징
+====================== */
+.survey-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 32px 0;
+}
+
+.page-btn {
+  min-width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-btn:hover {
+  background: #f3f4f6;
+}
+
+.page-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  font-weight: 600;
+}

@@ -1,0 +1,157 @@
+/* =========================
+   전체 레이아웃
+========================= */
+.hotel-detail {
+  max-width: 920px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.06),
+    0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================
+   헤더 영역
+========================= */
+.hotel-header {
+  margin-bottom: 24px;
+}
+
+.hotel-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.hotel-address {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.hotel-phone {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* =========================
+   대표 이미지 (배경 이미지 방식)
+========================= */
+.hotel-image-box {
+  margin: 28px 0;
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* 이미지 오버레이 (화질 보정 + 가독성) */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.35)
+  );
+}
+
+/* 이미지 안내 문구 */
+.img-notice {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 12px;
+  color: #f9fafb;
+  opacity: 0.85;
+}
+
+/* =========================
+   지도
+========================= */
+.hotel-map-section {
+  margin-top: 36px;
+}
+
+.hotel-map-section h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.hotel-map {
+  width: 100%;
+  height: 300px;
+  margin-top: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   액션 버튼
+========================= */
+.hotel-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+/* 카카오맵 버튼 (서브 액션) */
+.btn-outline {
+  padding: 12px 18px;
+  border: 1.5px solid #2563eb;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-outline:hover {
+  background: #eff6ff;
+}
+
+/* =========================
+   채팅 문의 버튼 (메인 액션)
+   ❌ 그라데이션 제거
+   ✅ 단색 + 절제된 강조
+========================= */
+.btn-primary {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;          /* 단색 */
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background: #1e40af;          /* 살짝 어두워짐 */
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.2);
+}

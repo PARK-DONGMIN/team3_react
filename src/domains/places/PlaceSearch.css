@@ -1,0 +1,15 @@
+.place-search-page {
+  max-width: 960px;
+}
+
+.place-search-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.place-search-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}

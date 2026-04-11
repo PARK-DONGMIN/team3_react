@@ -1,0 +1,49 @@
+.chat-date-divider {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #8a94a6;
+  margin: 14px 0;
+}
+
+.chat-msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.chat-msg.mine {
+  justify-content: flex-end;
+}
+
+.chat-msg.other {
+  justify-content: flex-start;
+}
+
+.chat-msg .bubble {
+  max-width: 68%;
+  padding: 11px 14px;
+  border-radius: 18px;
+  line-height: 1.45;
+  font-size: 0.95rem;
+}
+
+/* 내 메시지 */
+.chat-msg.mine .bubble {
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #eef2f7;
+  border-bottom-right-radius: 8px;
+}
+
+/* 받은 메시지 */
+.chat-msg.other .bubble {
+  background: #e8f0ff;
+  color: #1e3a8a;
+  border-bottom-left-radius: 8px;
+}
+
+.chat-msg .time {
+  font-size: 0.7rem;
+  color: #8a94a6;
+}

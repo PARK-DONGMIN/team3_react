@@ -1,0 +1,131 @@
+.login-page {
+  max-width: 420px;
+}
+
+/* 전체 화면 중앙 정렬 */
+.login-wrapper {
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f9fc;
+}
+
+/* 로그인 카드 */
+.login-card {
+  width: 380px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* 타이틀 */
+.login-title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 폼 */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+/* 아이디 저장 */
+.remember-id {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+
+  /* ⭐ 위아래 간격 조절 */
+  margin-top: -20px;
+  margin-bottom: -30px;
+}
+
+
+/* 체크박스 기본 여백 제거 */
+.remember-id input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+
+
+/* 입력창 */
+.login-form input {
+  height: 48px;
+  padding: 0 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #3b82f6;
+}
+
+/* 에러 */
+.login-error {
+  font-size: 13px;
+  color: #ef4444;
+  text-align: center;
+}
+
+/* 로그인 버튼 */
+.login-form button {
+  height: 50px;
+  margin-top: 10px;
+  background: #3b82f6;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background: #2563eb;
+}
+
+/* 테스트 계정 버튼 */
+.login-form .test-login-btn {
+  background: #ffffff;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.login-form .test-login-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* 하단 링크 */
+.login-links {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #777;
+}
+
+.login-links span {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.login-links span:hover {
+  color: #3b82f6;
+}
+

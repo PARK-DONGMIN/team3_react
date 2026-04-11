@@ -1,0 +1,286 @@
+/* =========================
+   Header Layout
+========================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* 🔥 드롭다운이 다른 섹션 위로 확실히 올라오게 */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 64px;
+  padding: 0 18px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #eef2f7;
+
+  /* 🔥 일부 레이아웃에서 드롭다운 클릭 씹히는 문제 방지용 */
+  isolation: isolate; /* 새로운 stacking context로 안전하게 */
+}
+
+/* 로고 */
+.logo a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  color: #1d4ed8;
+}
+
+/* =========================
+   Nav (left/center/right)
+========================= */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  white-space: nowrap;
+}
+
+.nav.right {
+  gap: 12px;
+}
+
+/* 기본 링크 */
+.nav a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 700;
+  font-size: 14px;
+
+  padding: 8px 10px;
+  border-radius: 10px;
+
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav a:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+/* =========================
+   Dropdown Menu Wrapper
+========================= */
+.menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 🔥 hover가 끊기는 "틈"을 메우는 투명 다리(bridge)
+   - menu-title과 dropdown 사이 10px 간격(top calc) 때문에
+     마우스가 잠깐 벗어나면 dropdown이 닫히는 문제를 방지 */
+.menu::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  top: 100%;
+  height: 14px; /* dropdown top(10px)보다 조금 더 */
+  background: transparent;
+  pointer-events: auto; /* 🔥 hover 유지 */
+}
+
+/* span 메뉴 타이틀 */
+.menu-title {
+  cursor: pointer;
+  user-select: none;
+
+  font-weight: 800;
+  font-size: 14px;
+  color: #111827;
+
+  padding: 8px 10px;
+  border-radius: 10px;
+
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu-title:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+/* =========================
+   Dropdown (default)
+========================= */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+
+  min-width: 200px;
+  padding: 10px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.14);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  /* 🔥 클릭/호버 씹힘 방지 핵심 */
+  z-index: 99999;
+  pointer-events: auto;
+}
+
+/* 드롭다운 리스트 기본 */
+.dropdown li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown a {
+  display: block;
+  padding: 9px 10px;
+  border-radius: 10px;
+
+  font-weight: 700;
+  font-size: 13px;
+  color: #111827;
+
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropdown a:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+/* =========================
+   Dropdown - Wide (community)
+========================= */
+.dropdown.wide {
+  left: 50%;
+  transform: translateX(-35%); /* 🔥 화면 가운데로 살짝 당겨서 잘림 방지 */
+  width: 520px;
+  max-width: min(520px, 80vw); /* 🔥 작은 화면에서도 안 튀게 */
+  padding: 14px;
+
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px;
+}
+
+/* 컬럼 */
+.dropdown-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdown-head {
+  font-size: 12px;
+  font-weight: 900;
+  color: #6b7280;
+  padding: 4px 6px;
+}
+
+/* 그룹/소제목 */
+.dropdown-group {
+  margin-bottom: 10px;
+}
+
+.dropdown-subhead {
+  font-size: 12px;
+  font-weight: 900;
+  color: #111827;
+  margin: 8px 0 4px;
+  padding: 0 6px;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+
+  text-decoration: none;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-link:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+.dropdown-muted {
+  color: #9ca3af;
+  font-size: 12px;
+  padding: 6px 8px;
+}
+
+/* =========================
+   Divider (관리자 드롭다운용)
+========================= */
+.dropdown-divider {
+  height: 1px;
+  background: #eef2f7;
+  margin: 6px 4px;
+  border-radius: 999px;
+}
+
+/* =========================
+   Chatlist Button (강조)
+========================= */
+.chatlist-btn {
+  background: #2563eb;
+  color: #ffffff !important;
+  font-weight: 900;
+
+  padding: 9px 12px !important;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.25);
+}
+
+.chatlist-btn:hover {
+  background: #1d4ed8 !important;
+  color: #ffffff !important;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1100px) {
+  .nav {
+    gap: 10px;
+  }
+  .nav a,
+  .menu-title {
+    padding: 7px 9px;
+    font-size: 13px;
+  }
+
+  .dropdown.wide {
+    width: 460px;
+    transform: translateX(-40%);
+    grid-template-columns: 170px 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav.right {
+    gap: 8px;
+  }
+  .chatlist-btn {
+    padding: 8px 10px !important;
+  }
+
+  .dropdown.wide {
+    width: 92vw;
+    transform: translateX(-50%);
+    left: 50%;
+    grid-template-columns: 1fr; /* 🔥 좁으면 한 컬럼으로 */
+  }
+}

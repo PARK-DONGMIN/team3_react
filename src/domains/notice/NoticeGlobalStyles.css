@@ -1,0 +1,252 @@
+/* ================================
+   공지 메인 컨테이너
+================================ */
+.notice-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 10px 12px;
+}
+
+/* 제목 */
+.notice-header,
+.notice-title {
+  text-align: left;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #222;
+}
+
+
+/* ================================
+   상단 검색 영역
+================================ */
+.notice-header-section,
+.notice-top-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.notice-search-input,
+.notice-input {
+  flex: 1;
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.notice-button,
+.notice-btn {
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  background: #ddd;
+  transition: 0.2s;
+}
+
+.notice-btn.primary {
+  background: #4c6ef5;
+  color: white;
+}
+
+.notice-btn.danger {
+  background: #ff6b6b;
+  color: white;
+}
+
+.notice-button:hover,
+.notice-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+
+/* ================================
+   메인 레이아웃 (좌 : 리스트 / 우 : 상세)
+================================ */
+.notice-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 20px;
+}
+
+
+/* ================================
+   공지 리스트
+================================ */
+.notice-list-ul,
+.notice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notice-list-item,
+.notice-item {
+  background: white;
+  border-radius: 20px;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.notice-list-item:hover,
+.notice-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.notice-list-item-selected,
+.notice-item.active {
+  border: 2px solid #4c6ef5 !important;
+  background: #f7f9ff;
+}
+
+.notice-badge {
+  font-size: 12px;
+  background: #eef3ff;
+  color: #4c6ef5;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.notice-title-text {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.notice-date {
+  font-size: 12px;
+  color: #777;
+}
+
+
+/* ================================
+   상세 카드
+================================ */
+.notice-detail-area,
+.notice-detail {
+  min-height: 260px;
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid #eee;
+  background: white;
+  box-shadow: 0 12px 22px rgba(0,0,0,0.05);
+}
+
+.notice-detail-area h3,
+.notice-detail h3 {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.notice-detail-category {
+  font-size: 13px;
+  color: #4c6ef5;
+  margin-bottom: 8px;
+}
+
+.notice-detail-area p,
+.notice-content {
+  white-space: pre-wrap;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.notice-file-area {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.notice-file-image,
+.notice-img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+}
+
+
+/* 선택 안내 */
+.notice-select-message,
+.notice-placeholder {
+  text-align: center;
+  padding: 50px 0;
+  color: #777;
+}
+
+
+/* 관리자 버튼 영역 */
+.notice-admin-buttons,
+.notice-admin {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+
+/* ================================
+   공지 생성 / 수정
+================================ */
+.notice-create-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 18px;
+  border: 1px solid #eee;
+  box-shadow: 0 14px 26px rgba(0,0,0,0.05);
+  background: white;
+}
+
+.notice-create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notice-create-form input,
+.notice-create-form textarea,
+.notice-create-form select {
+  padding: 11px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.button-area {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.button-area button {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.section-card{
+  background:white;
+  border-radius:22px;
+  padding:18px;
+  border:1px solid #eee;
+  box-shadow:0 10px 20px rgba(0,0,0,0.05);
+  margin-bottom:16px;
+}
+
+.section-title{
+  font-size:16px;
+  font-weight:bold;
+  margin-bottom:10px;
+}

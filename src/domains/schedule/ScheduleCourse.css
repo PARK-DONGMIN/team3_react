@@ -1,0 +1,99 @@
+/* ✅ 전체 박스 계산 통일 */
+.scs-wrap, .scs-wrap *{ box-sizing:border-box; }
+
+.scs-wrap{ max-width:1180px; margin:0 auto; padding:22px 16px 30px; }
+
+.scs-head{ display:flex; justify-content:space-between; gap:16px; align-items:flex-end; margin-bottom:12px; }
+.scs-title{ font-size:26px; font-weight:900; margin:0 0 6px; }
+.scs-desc{ margin:0; color:#6b7280; font-size:14px; }
+.scs-actions{ display:flex; gap:10px; }
+
+/* ✅ 버튼 가운데 정렬 */
+.scs-btn{
+  padding:10px 14px;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  font-weight:900;
+  cursor:pointer;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+}
+
+.scs-topbar{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  margin: 10px 0 14px;
+}
+
+/* ✅ 탭 줄: 넘치면 가로 스크롤 */
+.scs-tabs{
+  display:flex;
+  gap:10px;
+  min-width:0;
+  overflow-x:auto;
+  -webkit-overflow-scrolling: touch;
+  padding:0;          /* 튀어나옴 방지 */
+}
+
+/* ✅ 탭 가운데 정렬 */
+.scs-tab{
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.10);
+  background:#fff;
+  font-weight:900;
+  cursor:pointer;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+  white-space:nowrap;
+}
+.scs-tab.on{
+  border-color: rgba(37,99,235,.55);
+  box-shadow: 0 10px 22px rgba(37,99,235,.12);
+}
+
+.scs-right{ display:flex; align-items:center; gap:10px; }
+.scs-label{ font-size:12px; color:#6b7280; font-weight:900; }
+
+/* ✅ 셀렉트도 가운데 정렬 느낌 통일 */
+.scs-select{
+  height:40px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  padding:0 10px;
+  font-weight:900;
+  line-height:1;
+}
+
+.scs-wrap .dcb-wrap{
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* 완료한 탭 */
+.scs-tab.done {
+  border-color: rgba(34, 197, 94, 0.55);
+}
+
+/* 완료 뱃지 느낌 */
+.scs-tab.done::after {
+  content: "완료";
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}
+

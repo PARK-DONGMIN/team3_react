@@ -1,0 +1,155 @@
+/* ===============================
+   전체 레이아웃
+=============================== */
+.survey-analytics-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+  background: #f9fafb;
+}
+
+/* ===============================
+   타이틀
+=============================== */
+.survey-analytics-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+/* ===============================
+   상태 메시지
+=============================== */
+.survey-analytics-loading,
+.survey-analytics-empty,
+.survey-analytics-error {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 48px 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #6b7280;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.survey-analytics-error {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* ===============================
+   질문 카드
+=============================== */
+.survey-analytics-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.survey-analytics-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   질문 제목
+=============================== */
+.survey-question-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* ===============================
+   차트 영역
+=============================== */
+.survey-chart-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .survey-chart-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.survey-chart-box {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: inset 0 0 0 1px #f1f5f9;
+}
+
+/* ===============================
+   차트 내부 텍스트 튜닝
+=============================== */
+.recharts-text {
+  font-size: 13px;
+  fill: #374151;
+}
+
+.recharts-tooltip-wrapper {
+  font-size: 13px;
+}
+
+/* ===============================
+   주관식(TEXT) 결과
+=============================== */
+.survey-text-result {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: inset 0 0 0 1px #f1f5f9;
+}
+
+.survey-text-result ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.survey-text-result li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #374151;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.survey-text-result li:last-child {
+  border-bottom: none;
+}
+
+.survey-text-result p {
+  font-size: 14px;
+  color: #9ca3af;
+  text-align: center;
+  margin: 12px 0;
+}
+
+/* ===============================
+   범례 스타일 (PieChart)
+=============================== */
+.recharts-legend-wrapper {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* ===============================
+   Tooltip 스타일
+=============================== */
+.recharts-default-tooltip {
+  border-radius: 10px !important;
+  border: none !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  font-size: 13px;
+}

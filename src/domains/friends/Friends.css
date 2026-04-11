@@ -1,0 +1,196 @@
+/* ===============================
+   상단 / 하단 래퍼
+================================ */
+.friends-top-row,
+.friends-bottom-row {
+  display: flex;
+  justify-content: center;
+  background: #f6f8fc;
+  padding: 40px 20px 20px;
+}
+
+.friends-top-row {
+  gap: 28px;
+}
+
+.friends-bottom-row {
+  padding-top: 0;
+}
+
+/* ===============================
+   박스 카드
+================================ */
+.friends-box {
+  width: 340px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===============================
+   내 친구
+================================ */
+.friends-my {
+  width: calc(340px * 2 + 28px); /* 위 2개 합친 너비 */
+  border: 2px solid #a5b4fc;
+  background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+}
+
+/* ===============================
+   제목
+================================ */
+.friends-box h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111;
+  text-align: center;
+}
+
+/* ===============================
+   친구 카드 (공통 스타일)
+================================ */
+.friends-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+}
+
+.friends-item:hover {
+  background: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   내 친구 카드 (세로 정렬)
+================================ */
+.friends-item-vertical {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+/* ===============================
+   🔑 내 친구 Grid (3개 고정)
+================================ */
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 한 row에 3명 */
+  gap: 16px;
+}
+
+/* ===============================
+   닉네임
+================================ */
+.friends-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ===============================
+   버튼 영역
+================================ */
+.friends-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.friends-buttons button {
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ===============================
+   버튼 색상
+================================ */
+.btn-chat {
+  border: 1.5px solid #a5b4fc;
+  color: #4338ca;
+}
+
+.btn-remove {
+  border: 1.5px solid #fca5a5;
+  color: #ef4444;
+}
+
+.btn-accept {
+  border: 1.5px solid #86efac;
+  color: #16a34a;
+}
+
+.btn-reject {
+  border: 1.5px solid #fde68a;
+  color: #d97706;
+}
+
+/* ===============================
+   입력
+================================ */
+.friends-box input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.btn-add {
+  width: 100%;
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* ===============================
+   빈 상태
+================================ */
+.empty-text {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   모바일 대응
+================================ */
+@media (max-width: 900px) {
+  .friends-grid {
+    grid-template-columns: repeat(2, 1fr); /* 태블릿 */
+  }
+}
+
+@media (max-width: 640px) {
+  .friends-top-row {
+    flex-direction: column;
+  }
+
+  .friends-my {
+    width: 100%;
+  }
+
+  .friends-grid {
+    grid-template-columns: 1fr; /* 모바일 */
+  }
+}

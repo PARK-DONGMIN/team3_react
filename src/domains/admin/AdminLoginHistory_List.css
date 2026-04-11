@@ -1,0 +1,123 @@
+/* AdminLoginHistory_List.css */
+.cate-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cate-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.cate-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cate-form input[type="text"],
+.cate-form input[type="date"] {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.cate-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.cate-form button:hover {
+  background-color: #0056b3;
+}
+
+.cate-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.cate-table th,
+.cate-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.cate-table th {
+  background-color: #f1f1f1;
+  font-weight: 500;
+}
+
+.cate-empty {
+  text-align: center;
+  padding: 20px 0;
+  color: #999;
+}
+
+.cate-delete-btn {
+  padding: 4px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cate-delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* =========================
+   페이징
+========================= */
+.cate-pagination {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.cate-pagination button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.cate-pagination button:hover:not(.active) {
+  background-color: #f0f0f0;
+}
+
+.cate-pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}

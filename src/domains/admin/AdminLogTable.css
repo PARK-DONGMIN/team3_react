@@ -1,0 +1,230 @@
+.admin-log-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.admin-log-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 16px;
+}
+
+/* ===== tools ===== */
+.admin-log-tools {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.admin-log-input {
+  width: 320px; /* ✅ 조금 넓힘 */
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+}
+
+.admin-log-date {
+  width: 160px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+}
+
+.admin-log-btn {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.admin-log-btn.primary {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+.admin-log-btn.ghost {
+  background: white;
+}
+
+.admin-log-btn.danger {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: white;
+}
+
+.admin-log-btn.sm {
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* ===== table ===== */
+.admin-log-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: fixed;  /* ✅ 핵심 */
+}
+
+.admin-log-table thead th {
+  text-align: left;
+  padding: 14px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  background: rgba(0,0,0,0.02);
+  white-space: nowrap;
+}
+
+.admin-log-table tbody td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  vertical-align: middle;
+  overflow: hidden;              /* ✅ */
+  text-overflow: ellipsis;       /* ✅ */
+  white-space: nowrap;           /* ✅ */
+}
+
+.admin-log-table tbody tr:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+.admin-log-empty {
+  text-align: center;
+  padding: 24px 10px;
+  color: rgba(0,0,0,0.6);
+}
+
+/* ✅ 컬럼 폭: 화면처럼 깔끔하게 */
+.col-no     { width: 60px;  }
+.col-user   { width: 120px; }
+.col-status { width: 110px; }
+.col-chan   { width: 100px; }
+.col-to     { width: 240px; }
+.col-title  { width: 260px; } /* ✅ 제목 칼럼 넓힘 */
+.col-created{ width: 170px; }
+.col-sent   { width: 170px; }
+.col-act    { width: 90px;  }
+
+/* 가운데 정렬이 필요한 칼럼들 */
+.align-center { text-align: center; }
+
+/* ===== chip ===== */
+.admin-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  white-space: nowrap;
+}
+
+.admin-chip.status.sent    { background: rgba(34,197,94,0.14); }
+.admin-chip.status.pending { background: rgba(245,158,11,0.14); }
+.admin-chip.status.fail    { background: rgba(239,68,68,0.14); }
+.admin-chip.status.sending { background: rgba(59,130,246,0.12); }
+
+/* 버튼 */
+.admin-mini-btn {
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(239,68,68,0.35);
+  background: rgba(239,68,68,0.08);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ✅ 겹침 방지 핵심 */
+.admin-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: fixed; /* ✅ 이게 제일 중요 */
+}
+
+/* ✅ 공통 정렬 */
+.align-center {
+  text-align: center;
+}
+
+/* ✅ 컬럼 폭 고정(겹침 방지) */
+.col-no { width: 60px; }
+.col-user { width: 140px; }
+.col-status { width: 110px; }
+.col-chan { width: 110px; }
+.col-to { width: 260px; }
+.col-sid { width: 110px; }
+.col-title { width: 240px; }
+.col-created { width: 180px; }
+.col-sent { width: 180px; }
+.col-act { width: 90px; }
+
+/* ✅ 셀 내용 overflow 처리 */
+.td-user,
+.td-target,
+.td-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.td-sid {
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 제목은 너무 길 수 있으니 줄바꿈 허용하고 싶으면 이걸로 바꿔도 됨 */
+/*
+.td-title{
+  white-space: normal;
+  word-break: break-word;
+}
+*/
+
+/* ✅ 표 셀 세로 가운데 정렬 강제 */
+.admin-log-table tbody td {
+  vertical-align: middle;
+}
+
+/* ✅ 칩(상태/채널) 가운데 정렬 + 높이 고정 */
+.admin-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;          /* ✅ 고정 높이 */
+  line-height: 1;        /* ✅ 텍스트 기준선 흔들림 방지 */
+  padding: 0 12px;       /* ✅ 좌우만 */
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+/* ✅ 상태/채널 칸은 내용도 가운데 */
+.admin-log-table td.align-center,
+.admin-log-table th.align-center {
+  text-align: center;
+}
+
+/* ✅ 혹시 td 안에서 칩이 위로 뜨면 */
+.admin-log-table td.align-center > .admin-chip {
+  margin-top: 0;
+}

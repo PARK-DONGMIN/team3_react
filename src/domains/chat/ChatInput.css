@@ -1,0 +1,43 @@
+.chat-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+.chat-input {
+  flex: 1;
+  width: 100%;
+  resize: none;
+  min-height: 30px;              /* ⬅ 높이 증가 */
+  max-height: 100px;
+  padding: 14px 14px;
+  border-radius: 14px;
+  border: 1px solid #d7e3ff;
+  background: #f8fbff;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  outline: none;
+}
+
+.chat-input:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  background: #ffffff;
+}
+
+/* 전송 버튼 – 입력창과 높이 맞춤 */
+.chat-send-btn {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 14px;
+  border: 0;
+  background: #39588b;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chat-send-btn:hover {
+  background: #2563eb;
+}

@@ -1,0 +1,114 @@
+/* 검색창 영역 */
+.map-search {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  max-width: 350px;           /* 검색 영역 최대 폭 */
+}
+
+.map-search input {
+  flex: 1;
+  min-width: 0;               /* flex shrink 적용 */
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+.map-search input:focus {
+  border-color: #007bff;
+}
+
+.map-search button {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.map-search button:hover {
+  background-color: #0056b3;
+}
+
+
+.map-search button:hover {
+  background-color: #0056b3;
+}
+
+/* 지도 영역 */
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* 리스트 영역 */
+.map-list h4 {
+  margin-bottom: 10px;
+}
+
+.map-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.map-list li {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.map-list li:hover {
+  background-color: #f9f9f9;
+}
+
+.map-list li div {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.pagination button:disabled {
+  background-color: #f8f8f8;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: bold;
+  min-width: 30px;
+  text-align: center;
+}

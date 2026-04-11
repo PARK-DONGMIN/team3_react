@@ -1,0 +1,230 @@
+/* src/domains/quiz/QuizPlay.css */
+.quiz-wrap {
+  min-height: 100vh;
+  background: #f6f8fb;
+  padding: 22px 16px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.quiz-card {
+  width: min(860px, 100%);
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.quiz-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.quiz-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.quiz-sub {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.quiz-badge {
+  font-size: 12px;
+  font-weight: 700;
+  background: #eef2ff;
+  color: #3730a3;
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+.quiz-question {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.4;
+}
+
+/* ====== 옵션 리스트 ====== */
+.quiz-options{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top: 14px;
+}
+
+/* ✅ 세로 글자(폭 좁음/줄바꿈) 문제 해결 핵심 */
+.opt{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:14px 16px;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  background:#fff;
+  cursor:pointer;
+  transition: box-shadow .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.opt:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.06);
+}
+
+.opt.active {
+  border-color: #93c5fd;
+  box-shadow: 0 10px 22px rgba(37,99,235,0.12);
+}
+
+.opt-no {
+  font-weight: 900;
+  color: #111827;
+}
+
+.opt-text {
+  color: #111827;
+  line-height: 1.35;
+}
+
+.quiz-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quiz-error {
+  margin-top: 10px;
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.result {
+  margin-top: 16px;
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.result.ok { border-color: #86efac; background: #f0fdf4; }
+.result.no { border-color: #fca5a5; background: #fff1f2; }
+
+.result-title {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.result-desc {
+  margin-top: 10px;
+}
+
+.result-label {
+  font-weight: 900;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.result-text {
+  color: #111827;
+  line-height: 1.45;
+}
+
+.ai-panel {
+  margin-top: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 14px;
+  background: #fafafa;
+}
+
+.ai-title {
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.ai-block { margin-top: 10px; }
+.ai-label {
+  font-size: 12px;
+  font-weight: 900;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.ai-text { color: #111827; line-height: 1.45; }
+.ai-text.dim { color: #6b7280; }
+.ai-text.pre { white-space: pre-wrap; }
+
+.ai-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@media (max-width: 720px) {
+  .ai-grid { grid-template-columns: 1fr; }
+}
+
+.ai-chip {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px;
+}
+
+.ai-chip-title {
+  font-weight: 900;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.ai-chip-text {
+  color: #111827;
+  line-height: 1.4;
+}
+
+.id-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.id-pill {
+  background: #eef2ff;
+  color: #3730a3;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 900;
+  font-size: 12px;
+}

@@ -1,0 +1,168 @@
+/* ============================
+   기본 컨테이너
+============================ */
+.content, 
+.notice-container,
+.reaction-container,
+.admin-container {
+  max-width: 1180px;
+  margin: 25px auto;
+  padding: 10px 14px;
+}
+
+/* ============================
+   제목
+============================ */
+.title_line_left,
+.notice-title,
+.reaction-title,
+.admin-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* ============================
+   카드 리스트 공통
+============================ */
+.soft-box {
+  background: white;
+  border-radius: 22px;
+  border: 1px solid #eee;
+  padding: 18px;
+  margin-top: 12px;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.04);
+}
+
+/* ============================
+   카드
+============================ */
+.card-item {
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid #eee;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.card-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* ============================
+   작은 뱃지
+============================ */
+.badge-soft {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 6px;
+  background: #eef3ff;
+  color: #4c6ef5;
+}
+
+/* ============================
+   카드 제목
+============================ */
+.card-title,
+.notice-title-text,
+.reaction-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+/* ============================
+   설명, 날짜
+============================ */
+.card-desc,
+.notice-date,
+.reaction-card-info,
+.admin-sub-text {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ============================
+   버튼
+============================ */
+.primary-btn,
+.notice-btn,
+.reaction-btn,
+.admin-btn {
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  background: #eee;
+  transition: 0.2s;
+}
+
+.primary-btn {
+  background: #4c6ef5;
+  color: white;
+}
+
+.notice-btn.primary,
+.admin-btn.primary {
+  background: #4c6ef5;
+  color: white;
+}
+
+.notice-btn.danger,
+.admin-btn.danger,
+.reaction-btn.danger {
+  background: #ff6b6b;
+  color: white;
+}
+
+.primary-btn:hover,
+.notice-btn:hover,
+.reaction-btn:hover,
+.admin-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* ============================
+   페이징 (통일 UI)
+============================ */
+.posts-pagination,
+.reaction-pagination,
+.admin-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.posts-page-btn,
+.reaction-page-btn,
+.admin-page-btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.posts-page-btn:hover,
+.reaction-page-btn:hover,
+.admin-page-btn:hover {
+  background: #eef2ff;
+}
+
+.posts-page-btn.active,
+.admin-page-btn.btn-secondary {
+  background: #4c6ef5;
+  color: white;
+}

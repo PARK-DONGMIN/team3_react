@@ -1,0 +1,125 @@
+/* ================================
+   관리자 공통 컨테이너
+================================ */
+.admin-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 10px 12px;
+}
+
+/* 제목 */
+.admin-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #222;
+}
+
+/* ================================
+   상단 검색 & 필터 바
+================================ */
+.admin-top-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.admin-input,
+.admin-select {
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.admin-input {
+  flex: 1;
+}
+
+.admin-btn {
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background: #ddd;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.admin-btn.primary {
+  background: #4c6ef5;
+  color: white;
+}
+
+.admin-btn.success {
+  background: #2f9e44;
+  color: white;
+}
+
+.admin-btn.warning {
+  background: #f08c00;
+  color: white;
+}
+
+.admin-btn.danger {
+  background: #fa5252;
+  color: white;
+}
+
+.admin-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================
+   테이블
+================================ */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.admin-table th {
+  background: #f8f9ff;
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-table td {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-table tr:hover {
+  background: #f8faff;
+}
+
+/* ================================
+   페이징
+================================ */
+.admin-pagination {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.admin-page-btn {
+  padding: 8px 14px;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  margin: 0 4px;
+  cursor: pointer;
+  background: white;
+}
+
+.admin-page-btn:disabled {
+  background: #eee;
+  cursor: not-allowed;
+}

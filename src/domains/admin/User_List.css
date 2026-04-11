@@ -1,0 +1,111 @@
+/* 전체 컨테이너 */
+.user-container {
+  padding: 30px;
+  background-color: #f9fafb;
+}
+
+/* 제목 */
+.user-container h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* 🔍 검색 영역 (오른쪽 정렬 핵심) */
+.user-search {
+  display: flex;
+  justify-content: flex-end; /* ✅ 오른쪽 정렬 */
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.user-search input {
+  width: 260px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.user-search input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.user-search button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.user-search button:hover {
+  background-color: #1d4ed8;
+}
+
+/* 📋 테이블 */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.user-table thead {
+  background-color: #f1f5f9;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-table th {
+  font-weight: 600;
+  color: #374151;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* 데이터 없을 때 */
+.user-empty {
+  padding: 20px;
+  color: #6b7280;
+}
+
+/* 🔢 페이징 */
+.user-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.user-pagination button {
+  min-width: 34px;
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.user-pagination button.active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.user-pagination button:hover {
+  background-color: #e5e7eb;
+}

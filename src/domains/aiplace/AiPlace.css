@@ -1,0 +1,135 @@
+/* 전체 페이지 */
+.ai-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9fafb, #eef2f7);
+  padding: 40px 20px;
+}
+
+/* 상단 바 */
+.ai-top-bar {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 상단 버튼 */
+.ai-top-btn {
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ai-top-btn.ghost {
+  background: transparent;
+  border: none;
+  color: #4e5968;
+}
+
+.ai-top-btn.primary {
+  background: #343638;
+  border: none;
+  color: white;
+}
+
+/* 메인 카드 */
+.ai-card-lg {
+  max-width: 720px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* 타이틀 */
+.ai-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #191f28;
+}
+
+.ai-sub {
+  font-size: 15px;
+  color: #8b95a1;
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+
+/* 파일 선택 */
+.ai-file-box {
+  display: block;
+  border: 2px dashed #d1d6db;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #4e5968;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.ai-file-box input {
+  display: none;
+}
+
+/* 미리보기 */
+.ai-preview-lg {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+/* 메인 버튼 */
+.ai-main-btn {
+  width: 100%;
+  background: #2a2d31;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ai-main-btn:disabled {
+  background: #8b8d95;
+}
+
+/* 결과 카드 */
+.ai-result-card {
+  margin-top: 28px;
+  background: #f2f4f6;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.ai-result-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.ai-confidence {
+  margin-top: 6px;
+  font-weight: 600;
+  color: #3182f6;
+}
+
+.ai-desc {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #4e5968;
+  line-height: 1.6;
+}
+
+/* 에러 */
+.ai-error {
+  margin-top: 16px;
+  color: #e11d48;
+  font-weight: 600;
+}

@@ -1,0 +1,238 @@
+/* ===============================
+   전체 래퍼
+================================ */
+.chat-room-list-wrapper {
+  max-width: 640px;
+  margin: 20px auto;
+  padding: 16px;
+  background: #ffffff;
+}
+
+/* ===============================
+   탭 영역
+================================ */
+.chat-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+
+.chat-tabs button {
+  border: none;
+  background: #eef2ff;
+  color: #1e3a8a;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chat-tabs button:hover {
+  background: #dbeafe;
+}
+
+.chat-tabs button.active {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+/* ===============================
+   채팅 목록
+================================ */
+.chat-room-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===============================
+   채팅 아이템
+================================ */
+.chat-room-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 10px;
+  border-bottom: 1px solid #eef2ff;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.chat-room-item:hover {
+  background: #f5f8ff;
+}
+
+/* ===============================
+   좌측 정보 영역
+================================ */
+.chat-room-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* ===============================
+   제목 + NEW
+================================ */
+.chat-room-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1e3a8a;
+}
+
+/* NEW 배지 */
+.chat-room-new {
+  background: #ef4444;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+
+/* ===============================
+   마지막 메시지
+================================ */
+.chat-room-last {
+  font-size: 0.85rem;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 420px;
+}
+
+/* ===============================
+   시간
+================================ */
+.chat-room-time {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+/* ===============================
+   빈 목록
+================================ */
+.chat-room-item.empty {
+  justify-content: center;
+  color: #94a3b8;
+  cursor: default;
+}
+
+/* ===============================
+   dim 처리 (채팅 팝업용)
+================================ */
+.chat-dim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 999;
+}
+
+/* src/domains/chat/ChatRoomList.css */
+/* ✅ 기존 CSS 유지하면서 아래만 "추가"하면 됨 */
+
+.chat-room-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.chat-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chat-header-btn {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: white;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.05s ease, opacity 0.2s ease;
+}
+
+.chat-header-btn:active {
+  transform: scale(0.98);
+}
+
+.chat-header-btn.ghost {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.chat-header-btn.danger {
+  border-color: rgba(255, 77, 79, 0.35);
+  background: rgba(255, 77, 79, 0.12);
+}
+
+.chat-header-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ✅ 편집 모드에서 리스트 톤 다운 */
+.chat-room-list.edit-mode .chat-room-new {
+  display: none;
+}
+
+/* ✅ 선택 표시(동그라미) */
+.chat-select-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  margin-right: 10px;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.chat-select-dot.on {
+  border-color: rgba(37, 99, 235, 0.65);
+  background: rgba(37, 99, 235, 0.15);
+}
+
+.chat-select-dot.on::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.8);
+}
+
+/* ✅ 선택된 아이템 강조 */
+.chat-room-item.selected {
+  background: rgba(37, 99, 235, 0.06);
+  border-radius: 12px;
+}
+
+/* ===============================
+   모바일 대응
+================================ */
+@media (max-width: 640px) {
+  .chat-room-list-wrapper {
+    padding: 12px;
+  }
+
+  .chat-room-last {
+    max-width: 260px;
+  }
+
+  .chat-room-title {
+    font-size: 0.9rem;
+  }
+}

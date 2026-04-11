@@ -1,0 +1,287 @@
+/* =========================
+   공통 변수 (토스 감성)
+========================= */
+:root {
+  --quiz-blue: #3182f6;
+  --quiz-blue-light: #e8f1ff;
+  --quiz-gray-bg: #f8fafc;
+  --quiz-gray-text: #6b7280;
+  --quiz-border: #e5e7eb;
+  --quiz-radius: 16px;
+}
+
+/* =========================
+   페이지 Wrapper (배경을 더 풍성하게)
+========================= */
+.quiz-page-wrapper {
+  min-height: 100vh;
+  background: var(--quiz-gray-bg);
+  padding: 28px 16px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* 실제 페이지 영역 (넓혀서 허전함 제거) */
+.quiz-page {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* =========================
+   배너
+========================= */
+.quiz-banner {
+  height: 160px;
+  border-radius: 22px;
+  background-image: url("/images/quiz/quiz.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 배너 위에 살짝 오버레이(가독성/고급감) */
+.quiz-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* =========================
+   타이틀 / 진행도
+========================= */
+.quiz-header {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.quiz-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.quiz-progress-text {
+  color: var(--quiz-gray-text);
+  font-size: 14px;
+}
+
+/* =========================
+   레이아웃: 메인 + 사이드
+========================= */
+.quiz-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 18px;
+  align-items: start;
+}
+
+.quiz-main {
+  min-width: 0;
+}
+
+.quiz-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.quiz-side-card {
+  background: #fff;
+  border-radius: var(--quiz-radius);
+  padding: 18px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(229, 231, 235, 0.7);
+}
+
+.quiz-side-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.quiz-side-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  color: #111827;
+}
+
+.quiz-side-row span {
+  color: var(--quiz-gray-text);
+  font-size: 13px;
+}
+
+.quiz-side-tip {
+  color: #111827;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* 모바일에서는 1컬럼 */
+@media (max-width: 860px) {
+  .quiz-layout {
+    grid-template-columns: 1fr;
+  }
+  .quiz-banner {
+    height: 140px;
+  }
+}
+
+/* =========================
+   카드 공통
+========================= */
+.quiz-card {
+  background: #ffffff;
+  border-radius: var(--quiz-radius);
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  margin-bottom: 16px;
+  border: 1px solid rgba(229, 231, 235, 0.7);
+}
+
+/* =========================
+   문제
+========================= */
+.quiz-question {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.45;
+  color: #111827;
+}
+
+/* =========================
+   보기 (✅ 중복 정의 제거하고 이걸로 통일)
+========================= */
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--quiz-border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.quiz-option:hover {
+  background: var(--quiz-blue-light);
+  border-color: rgba(49, 130, 246, 0.6);
+}
+
+.quiz-option.selected {
+  background: var(--quiz-blue-light);
+  border-color: var(--quiz-blue);
+}
+
+.quiz-option.correct {
+  background: #eef2ff;
+  border-color: rgba(49, 130, 246, 0.9);
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.quiz-option.wrong {
+  background: #fef2f2;
+  border-color: #dc2626;
+  color: #7f1d1d;
+  font-weight: 700;
+}
+
+/* 라디오 숨기고 아이콘 느낌 */
+.quiz-radio input {
+  display: none;
+}
+
+/* 텍스트 */
+.quiz-option-text {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* =========================
+   제출 버튼
+========================= */
+.quiz-submit {
+  margin-top: 20px;
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  background: var(--quiz-blue);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.06s ease;
+}
+
+.quiz-submit:active {
+  transform: scale(0.99);
+}
+
+.quiz-submit:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.quiz-submit:not(:disabled):hover {
+  background: #2563eb;
+}
+
+/* =========================
+   정답 / 오답 피드백
+========================= */
+.quiz-feedback {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.quiz-feedback.loading {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.quiz-feedback.correct {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.quiz-feedback.wrong {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================
+   로딩 / 빈 상태
+========================= */
+.quiz-loading,
+.quiz-empty {
+  text-align: center;
+  color: var(--quiz-gray-text);
+  font-size: 15px;
+  padding: 40px 0;
+}

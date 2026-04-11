@@ -1,0 +1,86 @@
+.login-history {
+  max-width: 700px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-history-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.login-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.login-history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.login-history-item:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.login-history-item span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-history-item strong {
+  font-weight: bold;
+  color: #222;
+}
+
+.empty {
+  text-align: center;
+  padding: 15px 0;
+  color: #888;
+  font-style: italic;
+}
+
+/* 페이징 */
+.login-history-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.login-history-pagination button {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.login-history-pagination button:hover {
+  background-color: #eee;
+}
+
+.login-history-pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  font-weight: bold;
+}

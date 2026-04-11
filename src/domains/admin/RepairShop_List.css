@@ -1,0 +1,182 @@
+/* 전체 컨테이너 */
+.admin-container {
+  padding: 20px;
+  background-color: #f9fafb;
+  font-family: Arial, sans-serif;
+}
+
+/* 제목 */
+.admin-container h2 {
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+
+/* =========================
+   검색 영역
+========================= */
+.admin-search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.admin-search input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-search button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-search button:hover {
+  background-color: #1e40af;
+}
+
+/* =========================
+   입력 폼
+========================= */
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="checkbox"],
+.admin-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-form label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.admin-form button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+.admin-form button[type="submit"] {
+  grid-column: 2 / 3;
+  grid-row: 4;
+
+  background-color: #16a34a;
+  color: white;
+}
+
+.admin-form button[type="submit"]:hover {
+  background-color: #15803d;
+}
+
+.admin-form button[type="button"] {
+  grid-column: 1 / 2;
+  grid-row: 4;
+
+  background-color: #dc2626;
+  color: white;
+}
+
+.admin-form button[type="button"]:hover {
+  background-color: #6b7280;
+}
+
+/* =========================
+   테이블
+========================= */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.admin-table th {
+  background-color: #f3f4f6;
+  font-weight: bold;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.admin-table button {
+  padding: 4px 8px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.admin-table button:first-child {
+  background-color: #10b981;
+  color: white;
+}
+
+.admin-table button:first-child:hover {
+  background-color: #059669;
+}
+
+.admin-table button:last-child {
+  background-color: #dc2626;
+  color: white;
+}
+
+.admin-table button:last-child:hover {
+  background-color: #b91c1c;
+}
+
+/* =========================
+   페이징
+========================= */
+.admin-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.admin-pagination button {
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.admin-pagination button.active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.admin-pagination button:hover {
+  background-color: #e5e7eb;
+}

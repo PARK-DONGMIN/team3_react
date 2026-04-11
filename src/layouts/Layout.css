@@ -1,0 +1,183 @@
+/* --- Layout --- */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+/* --- Header --- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  height: 64px;
+  padding: 0 22px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+/* 로고 */
+.logo a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  color: #2563eb;
+}
+
+/* --- Nav --- */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* 링크 기본 */
+.nav a {
+  text-decoration: none;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: 0.15s ease;
+}
+
+.nav a:hover {
+  background: #f3f4f6;
+}
+
+/* 오른쪽 메뉴 */
+.nav.right {
+  gap: 10px;
+}
+
+/* 버튼 느낌 */
+.nav a.btn {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.nav a.btn:hover {
+  background: #f3f4f6;
+}
+
+/* 강조 버튼 */
+.nav a.btn.primary {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+
+.nav a.btn.primary:hover {
+  opacity: 0.92;
+}
+
+/* --- Content --- */
+.layout-content {
+  flex: 1;
+  padding: 40px 60px;
+  background-color: #f9fafb;
+}
+
+/* --- Footer --- */
+.footer {
+  height: 44px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #6b7280;
+  background-color: #ffffff;
+}
+
+/* ===========================
+   대분류 카테고리 드롭다운
+=========================== */
+
+/* 대분류 */
+.cate-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cate-menu span {
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 400;
+  transition: 0.15s ease;
+}
+
+.cate-menu span:hover {
+  background: #f3f4f6;
+}
+
+/* 드롭다운 */
+.cate-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  min-width: 180px;
+  padding: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  z-index: 300;
+
+  /* 핵심 */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* 🔥 hover 브릿지 (판정 널널하게) */
+.cate-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+
+/* hover 시 열기 */
+.cate-menu:hover .cate-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.cate-dropdown li {
+  list-style: none;
+}
+
+/* 중분류 항목 */
+.cate-dropdown li a {
+  display: block;
+  padding: 10px 12px;
+  margin: 2px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #111827;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.15s ease;
+}
+
+.cate-dropdown li a:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}

@@ -1,0 +1,128 @@
+/* ✅ 화면 기준 가운데 정렬 */
+.editpage-wrapper {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  background: #f7f8fc; /* 페이지 배경 살짝 연하게 */
+}
+
+/* ✅ 카드 영역 */
+.editpage-card {
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  padding: 36px 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* 제목 */
+.editpage-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.editpage-sub {
+  margin-top: 6px;
+  color: #666;
+  text-align: center;
+}
+
+.brand-highlight {
+  color: #646cffaa;
+  font-weight: 600;
+}
+
+/* form 영역 */
+.editpage-form {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editpage-form label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.editpage-form input {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.editpage-form input:focus {
+  border-color: #646cffaa;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.1);
+}
+
+/* 버튼 */
+.editpage-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: #646cffaa;
+  color: #646cffaa;
+}
+
+.gender-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.gender-toggle button {
+  flex: 1;
+  padding: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gender-toggle button.selected {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.nickname-check-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 입력창과 버튼 사이 간격 */
+  margin-bottom: 10px;
+}
+
+.nickname-input {
+  flex: 1;          /* 입력창이 버튼을 제외한 공간을 다 차지 */
+  padding: 8px;
+  font-size: 14px;
+}
+
+.nickname-btn {
+  padding: 8px 12px;  /* 버튼 여백 */
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,1158 @@
+/* =========================
+   기본 레이아웃
+========================= */
+.toss-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toss-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #191f28;
+  margin-bottom: 14px;
+}
+
+/* =========================
+   상단 네비
+========================= */
+.toss-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.toss-nav h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3182f6;
+}
+
+.toss-nav button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3182f6;
+  cursor: pointer;
+}
+
+.toss-nav button:disabled {
+  color: #c9d7f5;
+  cursor: not-allowed;
+}
+
+/* =========================
+   에러
+========================= */
+.toss-error {
+  background: #fff5f5;
+  color: #e53e3e;
+  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   Select (지역)
+========================= */
+.toss-select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e8eb;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.toss-select:focus {
+  border-color: #3182f6;
+}
+
+/* =========================
+   선택 카드 리스트 (세로형)
+========================= */
+.toss-box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* =========================
+   선택 카드
+========================= */
+.toss-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid #e5e8eb;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* hover */
+.toss-box:hover {
+  border-color: #cbd6ff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+/* 선택됨 */
+.toss-box.active {
+  background: #f2f6ff;
+  border: 1.5px solid #3182f6;
+  box-shadow: 0 8px 20px rgba(49, 130, 246, 0.18);
+}
+
+/* =========================
+   카드 내부 텍스트
+========================= */
+.toss-box-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.toss-box-texts h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #191f28;
+}
+
+.toss-box-texts p {
+  font-size: 13px;
+  color: #6b7684;
+  line-height: 1.5;
+}
+
+/* =========================
+   체크 표시
+========================= */
+.toss-check {
+  font-size: 18px;
+  font-weight: 800;
+  color: #3182f6;
+}
+
+/* =========================
+   📅 네이버 여행 느낌 달력
+========================= */
+.naver-calendar-wrapper {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.calendar-header h3 {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.calendar-header button {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #3182f6;
+}
+
+/* 탭 */
+.calendar-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.calendar-tabs button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e8eb;
+  background: #f9fafb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.calendar-tabs button.active {
+  background: #3182f6;
+  color: #fff;
+  border: none;
+}
+
+/* 그리드 */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.calendar-day.header {
+  font-weight: 700;
+  cursor: default;
+}
+
+.calendar-day.today {
+  border: 1px solid #3182f6;
+}
+
+.calendar-day.weekend {
+  color: #e53e3e;
+}
+
+.calendar-day.selected {
+  background: #3182f6;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* =========================
+   반응형
+========================= */
+@media (max-width: 480px) {
+  .toss-box-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   타이틀
+========================= */
+.toss-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #191f28;
+  margin-bottom: 10px;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.page-sub {
+  font-size: 14px;
+  color: #6b7684;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   위치 요약 카드
+========================= */
+.result-location {
+  background: linear-gradient(135deg, #f5f9ff, #eef4ff);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 28px;
+  box-shadow: 0 6px 16px rgba(49, 130, 246, 0.08);
+}
+
+.result-location p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* =========================
+   결과 리스트
+========================= */
+.result-box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.result-category-group {
+  animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-category-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #3182f6;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   선택 박스
+========================= */
+.result-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e8eb;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.result-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.result-box h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #191f28;
+}
+
+.result-box p {
+  font-size: 14px;
+  color: #6b7684;
+  line-height: 1.4;
+}
+
+/* =========================
+   버튼 영역
+========================= */
+.result-ai-btn,
+.result-save-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* AI 버튼 */
+.result-ai-btn {
+  background: linear-gradient(135deg, #3182f6, #5aa3ff);
+  color: #fff;
+  border: none;
+}
+
+.result-ai-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(49, 130, 246, 0.35);
+}
+
+/* 저장 버튼 */
+.result-save-btn {
+  background: #fff;
+  border: 1px solid #3182f6;
+  color: #3182f6;
+}
+
+.result-save-btn:hover {
+  background: #2563eb;;
+}
+
+/* =========================
+   하단 링크
+========================= */
+.result-home-btn {
+  display: block;
+  margin-top: 28px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7684;
+  text-decoration: none;
+}
+
+.result-home-btn:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   태그 (리스트/디테일 공통)
+========================= */
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #eef4ff;
+  color: #3182f6;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+
+/* =========================
+   반응형
+========================= */
+@media (max-width: 480px) {
+  .toss-wrapper {
+    padding: 20px 16px 50px;
+  }
+
+  .toss-title {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================
+   타이틀 영역
+========================= */
+.page-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #191f28;
+  margin-bottom: 6px;
+}
+
+.page-sub {
+  font-size: 14px;
+  color: #6b7684;
+  margin-bottom: 22px;
+}
+
+/* =========================
+   ➕ 추가 버튼
+========================= */
+.add-style-btn {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 26px;
+  border-radius: 16px;
+  border: 1.5px dashed #3182f6;
+  background: linear-gradient(135deg, #f5f9ff, #eef4ff);
+  color: #3182f6;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.add-style-btn:hover {
+  background: linear-gradient(135deg, #eef4ff, #e3edff);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(49, 130, 246, 0.18);
+}
+
+/* =========================
+   카드 리스트
+========================= */
+.taste-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  border: 1px solid #e5e8eb;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.taste-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+  border-color: #cbd6ff;
+}
+
+/* =========================
+   카드 헤더
+========================= */
+.taste-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.taste-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #191f28;
+}
+
+.taste-date {
+  font-size: 12px;
+  color: #8b95a1;
+}
+
+/* =========================
+   요약 문장
+========================= */
+.taste-desc {
+  font-size: 14px;
+  color: #4e5968;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  white-space: pre-line;
+}
+
+/* =========================
+   태그 영역
+========================= */
+.taste-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #eef4ff;
+  color: #3182f6;
+}
+
+/* =========================
+   AI 상태
+========================= */
+.taste-ai-state {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3182f6;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================
+   빈 상태
+========================= */
+.toss-sub {
+  font-size: 14px;
+  color: #8b95a1;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* =========================
+   반응형
+========================= */
+@media (max-width: 480px) {
+  .toss-wrapper {
+    padding: 24px 16px 60px;
+  }
+
+  .page-title {
+    font-size: 23px;
+  }
+
+  .taste-card {
+    padding: 16px;
+  }
+}
+
+/* =========================
+   Detail 전체 레이아웃
+========================= */
+.detail-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 20px 80px;
+  animation: fadeSlide 0.5s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Header
+========================= */
+.detail-header {
+  margin-bottom: 28px;
+}
+
+.detail-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #191f28;
+  margin-bottom: 6px;
+}
+
+.detail-sub {
+  font-size: 14px;
+  color: #6b7684;
+}
+
+.detail-btn-row {
+  margin-top: 18px;
+}
+
+/* =========================
+   공통 카드
+========================= */
+.detail-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  border: 1px solid #e5e8eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-2px);
+}
+
+.detail-card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #191f28;
+}
+
+.detail-card p {
+  font-size: 14px;
+  color: #4e5968;
+  line-height: 1.5;
+}
+
+/* =========================
+   취향 리스트
+========================= */
+.detail-list {
+  margin-top: 26px;
+}
+
+.detail-tags {
+  margin-top: 10px;
+}
+
+/* =========================
+   AI 섹션
+========================= */
+.detail-ai-section {
+  margin-top: 36px;
+}
+
+.ai-card {
+  background: linear-gradient(135deg, #f5f9ff, #eef4ff);
+  border-radius: 20px;
+  padding: 24px 20px;
+  border: 1px solid #cbd6ff;
+}
+
+.ai-section-title {
+
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #1f3cff;
+}
+
+.ai-summary {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 16px;
+}
+
+
+/* =========================
+   AI 일정 테이블
+========================= */
+.ai-schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.ai-schedule-table th {
+  font-size: 13px;
+  color: #6b7684;
+  text-align: left;
+  padding-bottom: 6px;
+}
+
+.ai-schedule-table td {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  color: #333d4b;
+  vertical-align: top;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================
+   버튼 스타일
+========================= */
+.btn-outline {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e8eb;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #f2f4f6;
+}
+
+.btn-delete {
+  width: 100%;
+  margin-top: 28px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #fff0f0;
+  border: 1px solid #ffd2d2;
+  color: #d32f2f;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  background: #ffe4e4;
+}
+
+.btn-back {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #f2f4f6;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+  background: #e5e8eb;
+}
+
+/* =========================
+   AI Raw Text (fallback)
+========================= */
+.ai-raw-text {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 13px;
+  color: #333;
+  overflow-x: auto;
+}
+
+/* =========================
+   반응형
+========================= */
+@media (max-width: 480px) {
+  .detail-title {
+    font-size: 24px;
+  }
+
+  .ai-schedule-table td {
+    font-size: 13px;
+  }
+}
+/* =========================
+   타이틀
+========================= */
+.ai-page-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #191f28;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   📌 나의 여행 정보 카드
+========================= */
+.ai-page-summary {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e5e8eb;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4e5968;
+  margin-bottom: 36px;
+}
+
+.ai-page-summary strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: #3182f6;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   로딩
+========================= */
+.ai-loading {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3182f6;
+  text-align: center;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+/* =========================
+   AI 요약 카드
+========================= */
+.ai-preview-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #191f28;
+}
+
+.ai-summary {
+  background: linear-gradient(135deg, #f5f9ff, #eef4ff);
+  border-radius: 20px;
+  padding: 20px 22px;
+  border: 1px solid #cbd6ff;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f3cff;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   AI 일정 테이블 (카드형)
+========================= */
+.ai-schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 18px;
+  margin-bottom: fixed;
+}
+
+.ai-schedule-table th {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8b95a1;
+  text-align: left;
+  padding-bottom: 6px;
+}
+
+.ai-schedule-table td {
+  background: #ffffff;
+  padding: 16px 18px;
+  border-radius: 16px;
+  font-size: 14px;
+  color: #333d4b;
+  vertical-align: top;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Day 강조 */
+.ai-schedule-table td:first-child {
+  font-weight: 800;
+  color: #3182f6;
+}
+
+.date-cell {
+  text-align: center;
+  font-size: 14px;
+}
+
+.date-year {
+  font-weight: 500;
+}
+
+.date-md {
+  white-space: nowrap; /* 월-일 같은 줄 유지 */
+}
+
+/* =========================
+   저장 버튼
+========================= */
+.result-save-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 18px;
+  border: none;
+  background: linear-gradient(135deg, #3182f6, #1f6bff);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(49, 130, 246, 0.35);
+  transition: all 0.25s ease;
+}
+
+.result-save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(49, 130, 246, 0.45);
+}
+
+/* =========================
+   홈 이동
+========================= */
+.result-home-btn {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #6b7684;
+  text-decoration: none;
+}
+
+.result-home-btn:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+  Detail 상단 버튼 정렬 FIX
+========================= */
+/* Detail 상단 버튼 정렬 FIX */
+.detail-footer-split {
+  display: flex;
+  gap: 12px;
+  margin: 28px 0 20px;
+}
+
+/* 공통 반반 버튼 */
+.detail-footer-split .half {
+  flex: 1;
+  height: 56px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  border: 1.5px solid #e5e8eb;
+  color: #191f28;
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: #f5f9ff;
+}
+
+/* =========================
+   🔥 여행 제목 입력 강조 카드
+========================= */
+.title-input-card {
+  background: #f8faff; /* ❗ 그라데이션 제거 */
+  border-radius: 16px;
+  padding: 18px 20px 20px;
+  margin-bottom: 32px;
+  border: 1px solid #dbe6ff; /* 연한 블루 */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06); /* 파랑 제거 */
+}
+
+.title-input-header {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1f3cff;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.title-input-header span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e55353; /* 톤 다운 레드 */
+}
+
+/* 입력창 */
+.title-input {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #e5e8eb; /* 기본은 중립 */
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.title-input::placeholder {
+  color: #9aa3b2;
+  font-weight: 500;
+}
+
+/* focus 시만 강조 */
+.title-input:focus {
+  border-color: #3182f6;
+  box-shadow: 0 0 0 3px rgba(49, 130, 246, 0.12);
+}
+
+.title-input-desc {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7684;
+}
+
+/* Day 카드 */
+.ai-day-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.ai-day-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.ai-day-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #111827;
+}
+
+/* 하루 일정 리스트 */
+.ai-day-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* 개별 일정 */
+.ai-detail-row {
+  padding-left: 14px;
+  border-left: 4px solid #9dc3ff; /* indigo */
+}
+
+/* 상단: 장소명 + 거리 */
+.ai-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-place-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.ai-distance {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1e62b5;
+  white-space: nowrap;
+}
+
+/* 시간 */
+.ai-detail-time {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* 메모 */
+.ai-detail-memo {
+  font-size: 14px;
+  color: #374151;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.map-select-btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #e4f4ff; /* 연한 회색 */
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* 활성화된 버튼 */
+.map-select-btn[data-active="true"] {
+  background: #95caff; /* 진한 파랑 */
+  border-color: #1f4e7d;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* =========================
+   반응형
+========================= */
+@media (max-width: 480px) {
+  .ai-page-title {
+    font-size: 24px;
+  }
+
+  .ai-summary {
+    font-size: 15px;
+  }
+
+  .ai-schedule-table td {
+    font-size: 13px;
+  }
+
+}

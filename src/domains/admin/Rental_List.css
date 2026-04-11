@@ -1,0 +1,197 @@
+/* =========================
+   전체 컨테이너
+========================= */
+.rental-container {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   제목
+========================= */
+.rental-container h2 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* =========================
+   🔍 검색 영역
+========================= */
+.rental-search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.rental-search input {
+  width: 220px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.rental-search button {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 6px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.rental-search button:hover {
+  background: #1e4ed8;
+}
+
+/* =========================
+   ✍️ 등록 / 수정 폼
+========================= */
+.rental-form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.rental-form input {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 140px;
+}
+
+/* 버튼 공통 */
+.rental-form button {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 등록 / 수정 */
+.rental-form button[type="submit"] {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.rental-form button[type="submit"]:hover {
+  background: #1e4ed8;
+}
+
+/* 취소 */
+.rental-form button[type="button"] {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.rental-form button[type="button"]:hover {
+  background: #d1d5db;
+}
+
+/* =========================
+   테이블
+========================= */
+.rental-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.rental-table th,
+.rental-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.rental-table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+.rental-table tr:hover {
+  background: #f3f4f6;
+}
+
+/* 액션 버튼 */
+.rental-table td button {
+  margin: 0 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 수정 */
+.rental-table td button:first-child {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.rental-table td button:first-child:hover {
+  background: #059669;
+}
+
+/* 삭제 */
+.rental-table td button:last-child {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.rental-table td button:last-child:hover {
+  background: #dc2626;
+}
+
+/* =========================
+   데이터 없음
+========================= */
+.rental-empty {
+  padding: 20px;
+  color: #9ca3af;
+}
+
+/* =========================
+   🔢 페이징
+========================= */
+.rental-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.rental-pagination button {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.rental-pagination button:hover {
+  background: #f3f4f6;
+}
+
+.rental-pagination button.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}

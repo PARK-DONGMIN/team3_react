@@ -1,0 +1,388 @@
+export const reviewRegions = [
+  /* ================= 서울 ================= */
+  {
+    code: "01",
+    city: "서울",
+    image: "/images/review/01.avif",
+    districts: [
+      { code: "01-1", name: "강남구", image: "/images/review/01-1.png" },
+      { code: "01-2", name: "강동구", image: "/images/review/01-2.jpg" },
+      { code: "01-3", name: "강북구", image: "/images/review/01-3.png" },
+      { code: "01-4", name: "강서구", image: "/images/review/01-4.png" },
+      { code: "01-5", name: "관악구", image: "/images/review/01-5.avif" },
+      { code: "01-6", name: "광진구", image: "/images/review/01-6.jpg" },
+      { code: "01-7", name: "구로구", image: "/images/review/01-7.jpg" },
+      { code: "01-8", name: "금천구", image: "/images/review/01-8.jpg" },
+      { code: "01-9", name: "노원구", image: "/images/review/01-9.jpg" },
+      { code: "01-10", name: "도봉구", image: "/images/review/01-10.avif" },
+      { code: "01-11", name: "동대문구", image: "/images/review/01-11.avif" },
+      { code: "01-12", name: "동작구", image: "/images/review/01-12.jpg" },
+      { code: "01-13", name: "마포구", image: "/images/review/01-13.webp" },
+      { code: "01-14", name: "서대문구", image: "/images/review/01-14.webp" },
+      { code: "01-15", name: "서초구", image: "/images/review/01-15.jpg" },
+      { code: "01-16", name: "성동구", image: "/images/review/01-16.jpg" },
+      { code: "01-17", name: "성북구", image: "/images/review/01-17.jpg" },
+      { code: "01-18", name: "송파구", image: "/images/review/01-18.jpg" },
+      { code: "01-19", name: "양천구", image: "/images/review/01-19.jpg" },
+      { code: "01-20", name: "영등포구", image: "/images/review/01-20.jpg" },
+      { code: "01-21", name: "용산구", image: "/images/review/01-21.jpg" },
+      { code: "01-22", name: "은평구", image: "/images/review/01-22.jpg" },
+      { code: "01-23", name: "종로구", image: "/images/review/01-23.jpg" },
+      { code: "01-24", name: "중구", image: "/images/review/01-24.jpg" },
+      { code: "01-25", name: "중랑구", image: "/images/review/01-25.jpg" },
+    ],
+  },
+
+  /* ================= 부산 ================= */
+  {
+    code: "02",
+    city: "부산",
+    image: "/images/review/02.jpg",
+    districts: [
+      { code: "02-1", name: "중구", image: "/images/review/02-1.jpg" },
+      { code: "02-2", name: "서구", image: "/images/review/02-2.avif" },
+      { code: "02-3", name: "영도구", image: "/images/review/02-3.jpg" },
+      { code: "02-4", name: "부산진구", image: "/images/review/02-4.webp" },
+      { code: "02-5", name: "동래구", image: "/images/review/02-5.webp" },
+      { code: "02-6", name: "남구", image: "/images/review/02-6.jpg" },
+      { code: "02-7", name: "북구", image: "/images/review/02-7.jpg" },
+      { code: "02-8", name: "해운대구", image: "/images/review/02-8.jpg" },
+      { code: "02-9", name: "사하구", image: "/images/review/02-9.jpg" },
+      { code: "02-10", name: "금정구", image: "/images/review/02-10.jpg" },
+      { code: "02-11", name: "강서구", image: "/images/review/02-11.jpg" },
+      { code: "02-12", name: "연제구", image: "/images/review/02-12.jpg" },
+      { code: "02-13", name: "수영구", image: "/images/review/02-13.jpg" },
+      { code: "02-14", name: "사상구", image: "/images/review/02-14.JPG" },
+      { code: "02-15", name: "기장군", image: "/images/review/02-15.jpg" },
+    ],
+  },
+
+  /* ================= 대구 ================= */
+  {
+    code: "03",
+    city: "대구",
+    image: "/images/review/03.jpg",
+    districts: [
+      { code: "03-1", name: "중구", image: "/images/review/03-1.jpg" },
+      { code: "03-2", name: "동구", image: "/images/review/03-2.webp" },
+      { code: "03-3", name: "서구", image: "/images/review/03-3.webp" },
+      { code: "03-4", name: "남구", image: "/images/review/03-4.webp" },
+      { code: "03-5", name: "북구", image: "/images/review/03-5.jpg" },
+      { code: "03-6", name: "수성구", image: "/images/review/03-6.jpg" },
+      { code: "03-7", name: "달서구", image: "/images/review/03-7.webp" },
+      { code: "03-8", name: "달성군", image: "/images/review/03-8.jpg" },
+    ],
+  },
+
+  /* ================= 인천 ================= */
+  {
+    code: "04",
+    city: "인천",
+    image: "/images/review/04.webp",
+    districts: [
+      { code: "04-1", name: "중구", image: "/images/review/04-1.jpg" },
+      { code: "04-2", name: "동구", image: "/images/review/04-2.jpg" },
+      { code: "04-3", name: "미추홀구", image: "/images/review/04-3.jpg" },
+      { code: "04-4", name: "연수구", image: "/images/review/04-4.jpg" },
+      { code: "04-5", name: "남동구", image: "/images/review/04-5.avif" },
+      { code: "04-6", name: "부평구", image: "/images/review/04-6.jpg" },
+      { code: "04-7", name: "계양구", image: "/images/review/04-7.jpg" },
+      { code: "04-8", name: "서구", image: "/images/review/04-8.webp" },
+      { code: "04-9", name: "강화군", image: "/images/review/04-9.jpg" },
+      { code: "04-10", name: "옹진군", image: "/images/review/04-10.jpg" },
+    ],
+  },
+
+  /* ================= 광주 ================= */
+  {
+    code: "05",
+    city: "광주",
+    image: "/images/review/05.jpg",
+    districts: [
+      { code: "05-1", name: "동구", image: "/images/review/05-1.jpg" },
+      { code: "05-2", name: "서구", image: "/images/review/05-2.webp" },
+      { code: "05-3", name: "남구", image: "/images/review/05-3.webp" },
+      { code: "05-4", name: "북구", image: "/images/review/05-4.jpg" },
+      { code: "05-5", name: "광산구", image: "/images/review/05-5.jpg" },
+    ],
+  },
+
+  /* ================= 대전 ================= */
+  {
+    code: "06",
+    city: "대전",
+    image: "/images/review/06.webp",
+    districts: [
+      { code: "06-1", name: "동구", image: "/images/review/06-1.jpg" },
+      { code: "06-2", name: "중구", image: "/images/review/06-2.jpg" },
+      { code: "06-3", name: "서구", image: "/images/review/06-3.jpg" },
+      { code: "06-4", name: "유성구", image: "/images/review/06-4.jpg" },
+      { code: "06-5", name: "대덕구", image: "/images/review/06-5.jpg" },
+    ],
+  },
+
+  /* ================= 울산 ================= */
+  {
+    code: "07",
+    city: "울산",
+    image: "/images/review/07.webp",
+    districts: [
+      { code: "07-1", name: "중구", image: "/images/review/07-1.jpg" },
+      { code: "07-2", name: "남구", image: "/images/review/07-2.webp" },
+      { code: "07-3", name: "동구", image: "/images/review/07-3.webp" },
+      { code: "07-4", name: "북구", image: "/images/review/07-4.jpg" },
+      { code: "07-5", name: "울주구", image: "/images/review/07-5.jpg" },
+    ],
+  },
+
+  /* ================= 세종 ================= */
+  {
+    code: "08",
+    city: "세종",
+    image: "/images/review/08.jpg",
+    districts: [
+      { code: "08-1", name: "세종시", image: "/images/review/08-1.jpg" },
+    ],
+  },
+
+  /* ================= 경기도 ================= */
+  {
+    code: "09",
+    city: "경기도",
+    image: "/images/review/09.jpg",
+    districts: [
+      { code: "09-1", name: "수원시", image: "/images/review/09-1.jpg" },
+      { code: "09-2", name: "성남시", image: "/images/review/09-2.webp" },
+      { code: "09-3", name: "고양시", image: "/images/review/09-3.jpg" },
+      { code: "09-4", name: "용인시", image: "/images/review/09-4.webp" },
+      { code: "09-5", name: "부천시", image: "/images/review/09-5.jpg" },
+      { code: "09-6", name: "안산시", image: "/images/review/09-6.webp" },
+      { code: "09-7", name: "안양시", image: "/images/review/09-7.webp" },
+      { code: "09-8", name: "남양주시", image: "/images/review/09-8.jpg" },
+      { code: "09-9", name: "화성시", image: "/images/review/09-9.webp" },
+      { code: "09-10", name: "평택시", image: "/images/review/09-10.webp" },
+      { code: "09-11", name: "의정부시", image: "/images/review/09-11.jpg" },
+      { code: "09-12", name: "시흥시", image: "/images/review/09-12.jpg" },
+      { code: "09-13", name: "파주시", image: "/images/review/09-13.webp" },
+      { code: "09-14", name: "김포시", image: "/images/review/09-14.jpg" },
+      { code: "09-15", name: "광주시", image: "/images/review/09-15.jpg" },
+      { code: "09-16", name: "광명시", image: "/images/review/09-16.webp" },
+      { code: "09-17", name: "군포시", image: "/images/review/09-17.jpg" },
+      { code: "09-18", name: "오산시", image: "/images/review/09-18.webp" },
+      { code: "09-19", name: "이천시", image: "/images/review/09-19.jpg" },
+      { code: "09-20", name: "안성시", image: "/images/review/09-20.png" },
+      { code: "09-21", name: "의왕시", image: "/images/review/09-21.webp" },
+      { code: "09-22", name: "하남시", image: "/images/review/09-22.jpg" },
+      { code: "09-23", name: "포천시", image: "/images/review/09-23.jpg" },
+      { code: "09-24", name: "양주시", image: "/images/review/09-24.jpg" },
+      { code: "09-25", name: "동두천시", image: "/images/review/09-25.jpg" },
+      { code: "09-26", name: "과천시", image: "/images/review/09-26.jpg" },
+      { code: "09-27", name: "연천군", image: "/images/review/09-27.jpg" },
+      { code: "09-28", name: "가평군", image: "/images/review/09-28.webp" },
+      { code: "09-29", name: "양평군", image: "/images/review/09-29.jpg" },
+      { code: "09-30", name: "여주시", image: "/images/review/09-30.jpg" },
+      { code: "09-31", name: "구리시", image: "/images/review/09-31.jpg" },
+    ],
+  },
+
+  /* ================= 강원도 ================= */
+  {
+    code: "10",
+    city: "강원도",
+    image: "/images/review/10.webp",
+    districts: [
+      { code: "10-1", name: "춘천시", image: "/images/review/10-1.jpg" },
+      { code: "10-2", name: "원주시", image: "/images/review/10-2.jpg" },
+      { code: "10-3", name: "강릉시", image: "/images/review/10-3.jpg" },
+      { code: "10-4", name: "동해시", image: "/images/review/10-4.jpg" },
+      { code: "10-5", name: "태백시", image: "/images/review/10-5.jpg" },
+      { code: "10-6", name: "속초시", image: "/images/review/10-6.jpg" },
+      { code: "10-7", name: "삼척시", image: "/images/review/10-7.jpg" },
+      { code: "10-8", name: "홍천군", image: "/images/review/10-8.jpg" },
+      { code: "10-9", name: "횡성군", image: "/images/review/10-9.jpg" },
+      { code: "10-10", name: "영월군", image: "/images/review/10-10.jpg" },
+      { code: "10-11", name: "평창군", image: "/images/review/10-11.jpg" },
+      { code: "10-12", name: "정선군", image: "/images/review/10-12.jpg" },
+      { code: "10-13", name: "철원군", image: "/images/review/10-13.jpg" },
+      { code: "10-14", name: "화천군", image: "/images/review/10-14.jpg" },
+      { code: "10-15", name: "양구군", image: "/images/review/10-15.jpg" },
+      { code: "10-16", name: "인제군", image: "/images/review/10-16.jpg" },
+      { code: "10-17", name: "고성군", image: "/images/review/10-17.jpg" },
+      { code: "10-18", name: "양양군", image: "/images/review/10-18.jpg" },
+    ],
+  },
+
+
+  /* ================= 충청북도 ================= */
+  {
+    code: "11",
+    city: "충청북도",
+    image: "/images/review/11.png",
+    districts: [
+      { code: "11-1", name: "청주시", image: "/images/review/11-1.jpg" },
+      { code: "11-2", name: "충주시", image: "/images/review/11-2.jpg" },
+      { code: "11-3", name: "제천시", image: "/images/review/11-3.jpg" },
+      { code: "11-4", name: "보은군", image: "/images/review/11-4.jpg" },
+      { code: "11-5", name: "옥천군", image: "/images/review/11-5.jpg" },
+      { code: "11-6", name: "영동군", image: "/images/review/11-6.jpg" },
+      { code: "11-7", name: "증평군", image: "/images/review/11-7.jpg" },
+      { code: "11-8", name: "진천군", image: "/images/review/11-8.jpg" },
+      { code: "11-9", name: "괴산군", image: "/images/review/11-9.jpg" },
+      { code: "11-10", name: "음성군", image: "/images/review/11-10.jpg" },
+      { code: "11-11", name: "단양군", image: "/images/review/11-11.png" },
+    ],
+  },
+
+
+  /* ================= 충청남도 ================= */
+  {
+  code: "12",
+  city: "충청남도",
+  image: "/images/review/12.jpg",
+  districts: [
+    { code: "12-1", name: "천안시", image: "/images/review/12-1.jpg" },
+    { code: "12-2", name: "공주시", image: "/images/review/12-2.jpg" },
+    { code: "12-3", name: "보령시", image: "/images/review/12-3.jpg" },
+    { code: "12-4", name: "아산시", image: "/images/review/12-4.jpg" },
+    { code: "12-5", name: "서산시", image: "/images/review/12-5.jpg" },
+    { code: "12-6", name: "논산시", image: "/images/review/12-6.jpg" },
+    { code: "12-7", name: "계룡시", image: "/images/review/12-7.jpg" },
+    { code: "12-8", name: "당진시", image: "/images/review/12-8.png" },
+    { code: "12-9", name: "금산군", image: "/images/review/12-9.jpg" },
+    { code: "12-10", name: "부여군", image: "/images/review/12-10.jpg" },
+    { code: "12-11", name: "서천군", image: "/images/review/12-11.jpg" },
+    { code: "12-12", name: "청양군", image: "/images/review/12-12.png" },
+    { code: "12-13", name: "홍성군", image: "/images/review/12-13.jpg" },
+    { code: "12-14", name: "예산군", image: "/images/review/12-14.jpg" },
+    { code: "12-15", name: "태안군", image: "/images/review/12-15.jpg" },
+  ],
+},
+
+
+  /* ================= 전라북도 ================= */
+  {
+  code: "13",
+  city: "전라북도",
+  image: "/images/review/13.jpg",
+  districts: [
+    { code: "13-1", name: "전주시", image: "/images/review/13-1.jpg" },
+    { code: "13-2", name: "군산시", image: "/images/review/13-2.jpeg" },
+    { code: "13-3", name: "익산시", image: "/images/review/13-3.jpg" },
+    { code: "13-4", name: "정읍시", image: "/images/review/13-4.jpg" },
+    { code: "13-5", name: "남원시", image: "/images/review/13-5.jpg" },
+    { code: "13-6", name: "김제시", image: "/images/review/13-6.jpg" },
+    { code: "13-7", name: "완주군", image: "/images/review/13-7.jpg" },
+    { code: "13-8", name: "진안군", image: "/images/review/13-8.jpg" },
+    { code: "13-9", name: "무주군", image: "/images/review/13-9.jpg" },
+    { code: "13-10", name: "장수군", image: "/images/review/13-10.jpg" },
+    { code: "13-11", name: "임실군", image: "/images/review/13-11.jpg" },
+    { code: "13-12", name: "순창군", image: "/images/review/13-12.jpg" },
+    { code: "13-13", name: "고창군", image: "/images/review/13-13.jpg" },
+    { code: "13-14", name: "부안군", image: "/images/review/13-14.jpg" },
+  ],
+},
+
+
+  /* ================= 전라남도 ================= */
+  {
+  code: "14",
+  city: "전라남도",
+  image: "/images/review/14.avif",
+  districts: [
+    { code: "14-1", name: "목포시", image: "/images/review/14-1.webp" },
+    { code: "14-2", name: "여수시", image: "/images/review/14-2.jpg" },
+    { code: "14-3", name: "순천시", image: "/images/review/14-3.jpg" },
+    { code: "14-4", name: "나주시", image: "/images/review/14-4.jpg" },
+    { code: "14-5", name: "광양시", image: "/images/review/14-5.png" },
+    { code: "14-6", name: "담양군", image: "/images/review/14-6.jpeg" },
+    { code: "14-7", name: "곡성군", image: "/images/review/14-7.webp" },
+    { code: "14-8", name: "구례군", image: "/images/review/14-8.jpeg" },
+    { code: "14-9", name: "고흥군", image: "/images/review/14-9.jpg" },
+    { code: "14-10", name: "보성군", image: "/images/review/14-10.png" },
+    { code: "14-11", name: "화순군", image: "/images/review/14-11.jpg" },
+    { code: "14-12", name: "장흥군", image: "/images/review/14-12.png" },
+    { code: "14-13", name: "강진군", image: "/images/review/14-13.jpg" },
+    { code: "14-14", name: "해남군", image: "/images/review/14-14.jpg" },
+    { code: "14-15", name: "영암군", image: "/images/review/14-15.jpg" },
+    { code: "14-16", name: "무안군", image: "/images/review/14-16.jpg" },
+    { code: "14-17", name: "함평군", image: "/images/review/14-17.png" },
+    { code: "14-18", name: "영광군", image: "/images/review/14-18.jpg" },
+    { code: "14-19", name: "장성군", image: "/images/review/14-19.jpg" },
+    { code: "14-20", name: "완도군", image: "/images/review/14-20.jpg" },
+    { code: "14-21", name: "진도군", image: "/images/review/14-21.jpg" },
+    { code: "14-22", name: "신안군", image: "/images/review/14-22.jpg" },
+  ],
+},
+
+
+  /* ================= 경상북도 ================= */
+  {
+  code: "15",
+  city: "경상북도",
+  image: "/images/review/15.webp",
+  districts: [
+    { code: "15-1", name: "포항시", image: "/images/review/15-1.jpg" },
+    { code: "15-2", name: "경주시", image: "/images/review/15-2.webp" },
+    { code: "15-3", name: "김천시", image: "/images/review/15-3.jpg" },
+    { code: "15-4", name: "안동시", image: "/images/review/15-4.jpg" },
+    { code: "15-5", name: "구미시", image: "/images/review/15-5.jpg" },
+    { code: "15-6", name: "영주시", image: "/images/review/15-6.jpg" },
+    { code: "15-7", name: "영천시", image: "/images/review/15-7.jpg" },
+    { code: "15-8", name: "상주시", image: "/images/review/15-8.jpg" },
+    { code: "15-9", name: "문경시", image: "/images/review/15-9.jpg" },
+    { code: "15-10", name: "경산시", image: "/images/review/15-10.jpg" },
+    { code: "15-11", name: "의성군", image: "/images/review/15-11.webp" },
+    { code: "15-12", name: "청송군", image: "/images/review/15-12.jpg" },
+    { code: "15-13", name: "영양군", image: "/images/review/15-13.jpg" },
+    { code: "15-14", name: "영덕군", image: "/images/review/15-14.jpg" },
+    { code: "15-15", name: "청도군", image: "/images/review/15-15.jpg" },
+    { code: "15-16", name: "고령군", image: "/images/review/15-16.jpg" },
+    { code: "15-17", name: "성주군", image: "/images/review/15-17.jpg" },
+    { code: "15-18", name: "칠곡군", image: "/images/review/15-18.webp" },
+    { code: "15-19", name: "예천군", image: "/images/review/15-19.jpg" },
+    { code: "15-20", name: "봉화군", image: "/images/review/15-20.png" },
+    { code: "15-21", name: "울진군", image: "/images/review/15-21.jpg" },
+    { code: "15-22", name: "울릉군", image: "/images/review/15-22.jpg" },
+  ],
+},
+
+
+  /* ================= 경상남도 ================= */
+  {
+  code: "16",
+  city: "경상남도",
+  image: "/images/review/16.jpg",
+  districts: [
+    { code: "16-1", name: "창원시", image: "/images/review/16-1.jpg" },
+    { code: "16-2", name: "진주시", image: "/images/review/16-2.jpg" },
+    { code: "16-3", name: "통영시", image: "/images/review/16-3.jpg" },
+    { code: "16-4", name: "사천시", image: "/images/review/16-4.jpg" },
+    { code: "16-5", name: "김해시", image: "/images/review/16-5.jpg" },
+    { code: "16-6", name: "밀양시", image: "/images/review/16-6.webp" },
+    { code: "16-7", name: "거제시", image: "/images/review/16-7.jpg" },
+    { code: "16-8", name: "양산시", image: "/images/review/16-8.jpg" },
+    { code: "16-9", name: "의령군", image: "/images/review/16-9.jpg" },
+    { code: "16-10", name: "함안군", image: "/images/review/16-10.jpg" },
+    { code: "16-11", name: "창녕군", image: "/images/review/16-11.jpg" },
+    { code: "16-12", name: "고성군", image: "/images/review/16-12.jpg" },
+    { code: "16-13", name: "남해군", image: "/images/review/16-13.jpg" },
+    { code: "16-14", name: "하동군", image: "/images/review/16-14.jpg" },
+    { code: "16-15", name: "산청군", image: "/images/review/16-15.webp" },
+    { code: "16-16", name: "함양군", image: "/images/review/16-16.jpg" },
+    { code: "16-17", name: "거창군", image: "/images/review/16-17.jpg" },
+    { code: "16-18", name: "합천군", image: "/images/review/16-18.webp" },
+  ],
+},
+
+
+  /* ================= 제주 ================= */
+  {
+    code: "17",
+    city: "제주특별자치도",
+    image: "/images/review/17.avif",
+    districts: [
+      { code: "17-1", name: "제주시", image: "/images/review/17-1.jpg" },
+      { code: "17-2", name: "서귀포시", image: "/images/review/17-2.webp" },
+    ],
+  },
+];

@@ -1,0 +1,1024 @@
+.home-page {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ----------------- */
+/* 상단 히어로 영역  */
+/* ----------------- */
+
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+  gap: 32px;
+  padding: 32px 0 40px;
+}
+
+.home-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.06);
+}
+
+.home-hero-title {
+  font-size: 40px;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.home-hero-sub {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.home-hero-meta {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* 버튼 스타일 공통 */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  font-size: 13px;
+  color: #4b5563;
+  background-color: #ffffff;
+}
+
+.btn-ghost:hover {
+  background-color: #f3f4f6;
+}
+
+/* 히어로 카드 */
+
+.home-hero-card {
+  background: radial-gradient(circle at top left, #dbeafe 0, #eff6ff 35%, #ffffff 100%);
+  border-radius: 20px;
+  padding: 20px 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.home-hero-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+
+.home-hero-card-label {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background-color: rgba(15, 23, 42, 0.75);
+  color: #e5e7eb;
+}
+
+.home-hero-card-chip {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background-color: rgba(37, 99, 235, 0.1);
+  color: #1d4ed8;
+}
+
+.home-hero-card-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.home-hero-card-list {
+  margin: 0 0 12px;
+  padding-left: 16px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.home-hero-card-footer {
+  margin: 0;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* ----------------- */
+/* 아래 리스트 영역  */
+/* ----------------- */
+
+.home-list-section {
+  padding: 8px 0 28px; /* ✅ 아래 공백 살짝 줄임 */
+}
+
+.home-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.home-list-title {
+  font-size: 18px;
+  font-weight: 500; /* ✅ 글씨 덜 굵게 */
+  margin: 0;
+}
+
+.home-list-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* 필터 칩 */
+
+.chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  font-size: 11px;
+  font-weight: 500;
+  background-color: #111827;
+  color: #f9fafb;
+  cursor: pointer;
+  transition: 0.12s ease;
+}
+
+.chip:hover {
+  filter: brightness(1.05);
+}
+
+.chip-outline {
+  background-color: #ffffff;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.chip-outline:hover {
+  background-color: #f3f4f6;
+}
+
+/* ✅ “원래 빈상태 느낌”을 리스트/빈상태 공통 박스로 */
+.home-list-panel {
+  border-radius: 16px;
+  padding: 24px 20px;
+  border: 1px dashed #d1d5db;
+  background: linear-gradient(135deg, #f9fafb, #eff6ff);
+  text-align: left;
+}
+
+/* 빈 상태(패널 안에서) */
+.home-list-empty {
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.home-list-empty-title {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.home-list-empty-sub {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #2563eb;
+  font-size: 13px;
+  color: #2563eb;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background-color: #eff6ff;
+}
+
+/* ✅ 일정 있을 때 그리드 + 카드 */
+.home-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.home-schedule-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px;
+  transition: 0.12s ease;
+}
+
+.home-schedule-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.home-schedule-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.home-schedule-meta {
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b7280;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ----------------- */
+/* 반응형 처리 */
+/* ----------------- */
+
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-hero-card {
+    order: -1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home-list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .home-list-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page {
+    padding: 0 16px;
+  }
+
+  .home-hero {
+    padding-top: 20px;
+  }
+
+  .home-hero-title {
+    font-size: 30px;
+  }
+
+  .home-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* 공통 섹션 타이틀 */
+.home-section-title {
+  font-size: 22px;
+  font-weight: 600; /* ✅ 700 -> 600 살짝 덜 굵게 */
+  margin-bottom: 20px;
+}
+
+/* ---------- 1. USP 아이콘 섹션 ---------- */
+.home-usp-section {
+  margin: 50px 0; /* ✅ 살짝 줄임 */
+}
+
+.home-usp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.home-usp-item {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: 0.2s ease;
+}
+
+.home-usp-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.home-usp-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.home-usp-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.home-usp-desc {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ---------- 2. 인기 여행지 랭킹 섹션 ---------- */
+.home-ranking-section {
+  margin: 50px 0; /* ✅ 살짝 줄임 */
+}
+
+.home-ranking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+}
+
+.home-ranking-card {
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  border: 1px solid #dbeafe;
+  transition: 0.2s;
+}
+
+.home-ranking-card:hover {
+  transform: translateY(-4px);
+}
+
+.home-ranking-emoji {
+  font-size: 32px;
+}
+
+.home-ranking-city {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.home-ranking-tag {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ---------- 3. 후기 슬라이더 ---------- */
+.home-review-section {
+  margin: 50px 0; /* ✅ 살짝 줄임 */
+}
+
+.home-review-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.home-review-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.home-review-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.home-review-user {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* 후기 섹션 헤더 */
+.home-review-header {
+  display: flex;
+  justify-content: space-between; /* 양쪽 끝 정렬 */
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* + 더보기 버튼 스타일 */
+.review-more-btn {
+  font-size: 12px;
+  color: #2563eb;
+  text-decoration: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: 0.15s;
+}
+
+.review-more-btn:hover {
+  background-color: #eff6ff;
+}
+
+/* ---------- 4. CTA 섹션 ---------- */
+.home-cta-section {
+  margin: 24px 0 50px; /* ✅ 공백 줄임 */
+  display: flex;
+  justify-content: center;
+}
+
+.home-cta-box {
+  text-align: center;
+  background: linear-gradient(135deg, #dbeafe, #f3e8ff);
+  padding: 36px 30px;
+  border-radius: 20px;
+
+  /* ✅ 박스 가로 더 넓게 */
+  max-width: 920px;
+  width: 100%;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.home-cta-title {
+  font-size: 14px;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.home-cta-main {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.home-cta-sub {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.home-cta-btn {
+  margin-top: 18px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.home-cta-btn:hover {
+  background: #4338ca;
+}
+
+/* ----------------------- */
+/* 여기어때 스타일 히어로 슬라이더 */
+/* ----------------------- */
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  margin: 32px 0 40px; /* ✅ 공백 살짝 줄임 */
+}
+
+.hero-slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-slide-text {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  padding: 14px 18px;
+  border-radius: 16px;
+  color: #fff;
+  max-width: 65%;
+}
+
+.hero-slide-text h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.hero-slide-text p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* 좌우 버튼 */
+.hero-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  border: none;
+  font-size: 32px;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.hero-btn:hover {
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-btn.prev {
+  left: 14px;
+}
+
+.hero-btn.next {
+  right: 14px;
+}
+
+/* ●●● 인디케이터 */
+.hero-dots {
+  position: absolute;
+  bottom: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dot.active {
+  background: #fff;
+  width: 20px;
+}
+
+/* ----------------------- */
+/* 공통 슬라이더 스타일 */
+/* ----------------------- */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.45s ease;
+}
+
+.slide-item {
+  flex: 0 0 calc(100% / 3); /* 3개씩 보이게 */
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.slide-arrow.left {
+  left: -10px;
+}
+
+.slide-arrow.right {
+  right: -10px;
+}
+
+.slide-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* ===============================
+   ✅ 내 라이딩 계획 (세련/카드형)
+================================ */
+
+.home-list-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.home-list-subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.home-list-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-add-btn {
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-size: 12px;
+  color: #111827;
+  cursor: pointer;
+  transition: 0.18s ease;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.home-add-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.10);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+/* 박스 느낌 유지 + 내부에 카드들이 딱 차도록 */
+.home-list-panel {
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px dashed #d1d5db;
+  background: linear-gradient(135deg, #f9fafb, #eff6ff);
+}
+
+/* 카드 그리드 */
+.home-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+/* 일정 카드 */
+.home-schedule-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  transition: 0.18s ease;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+}
+
+.home-schedule-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.10);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+.home-schedule-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.home-schedule-title {
+  font-size: 15px;
+  font-weight: 600; /* 더 얇게 원하면 500으로 바꿔도 예쁨! */
+  line-height: 1.3;
+}
+
+.home-dday {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.home-dday.upcoming {
+  background: rgba(248, 35, 46, 0.775);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #FFF;
+}
+
+.home-dday.today {
+  background: rgba(79, 70, 229, 0.12);
+  border-color: rgba(79, 70, 229, 0.22);
+  color: #4338ca;
+}
+
+.home-dday.past {
+  background: rgba(107, 114, 128, 0.10);
+  border-color: rgba(107, 114, 128, 0.20);
+  color: #6b7280;
+}
+
+.home-dday.unknown {
+  background: rgba(17, 24, 39, 0.06);
+  border-color: rgba(17, 24, 39, 0.12);
+  color: #374151;
+}
+
+.home-schedule-meta {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.home-schedule-date {
+  color: #374151;
+}
+
+.home-schedule-chip {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  color: #1d4ed8;
+}
+
+/* 난이도 배지 컬러 */
+.home-schedule-chip.lv-low {
+  background: rgba(34, 197, 94, 0.12); /* 초록 */
+  color: #16a34a;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.home-schedule-chip.lv-mid {
+  background: rgba(59, 130, 246, 0.12); /* 파랑 */
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.home-schedule-chip.lv-high {
+  background: rgba(239, 68, 68, 0.12); /* 빨강 */
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.home-schedule-chip.lv-etc {
+  background: rgba(107, 114, 128, 0.12);
+  color: #4b5563;
+  border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+
+.home-schedule-submeta {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.home-dot {
+  color: #9ca3af;
+}
+
+/* 지역/도시 라인 */
+.home-schedule-loc {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.home-loc-icon {
+  font-size: 13px;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+.home-loc-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 제목 너무 굵으면 여기만 살짝 얇게 */
+.home-schedule-title {
+  font-weight: 600; /* 600 -> 500으로 살짝 세련 */
+  font-style: bold;
+}
+
+/* ====== NEW: 동행 선택(앱 느낌 버튼) ====== */
+.sc-choice-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:12px;
+  margin-top: 12px;
+}
+
+.sc-choice{
+  border:1px solid rgba(0,0,0,0.12);
+  background:#fff;
+  border-radius:14px;
+  padding:14px 12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  transition: transform 0.08s ease, border-color 0.12s ease;
+}
+
+.sc-choice:hover{ transform: translateY(-1px); }
+.sc-choice.active{
+  border-color: rgba(0, 120, 255, 0.6);
+  box-shadow: 0 6px 18px rgba(0, 120, 255, 0.12);
+}
+
+.sc-choice-emoji{ font-size: 20px; }
+.sc-choice-text{ font-weight: 600; }
+
+/* ====== NEW: 인원 스텝퍼(동그라미 + -) ====== */
+.sc-stepper{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin: 10px 0 18px;
+}
+
+.sc-stepper-btn{
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,0.12);
+  background:#fff;
+  font-size:24px;
+  line-height: 1;
+  cursor:pointer;
+}
+
+.sc-stepper-value{
+  min-width:60px;
+  height:44px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,0.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 700;
+}
+
+/* ====== NEW: 예산 슬라이더(0 ~ 500만원) ====== */
+.sc-range-wrap{
+  margin: 10px 0 18px;
+}
+
+.sc-range-value{
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.sc-range{
+  width:100%;
+  accent-color: #0078ff;
+}
+
+.sc-range-labels{
+  display:flex;
+  justify-content:space-between;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
+/* ====== NEW: 라디오(○ 공개/비공개, 난이도) ====== */
+.sc-radio-group{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin: 10px 0 18px;
+}
+
+.sc-radio{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  user-select:none;
+  font-weight: 600;
+}
+
+.sc-radio input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.sc-radio-dot{
+  width:18px;
+  height:18px;
+  border-radius:999px;
+  border:2px solid rgba(0,0,0,0.22);
+  display:inline-block;
+  position:relative;
+}
+
+.sc-radio input:checked + .sc-radio-dot{
+  border-color: rgba(0,120,255,0.9);
+}
+
+.sc-radio input:checked + .sc-radio-dot::after{
+  content:"";
+  position:absolute;
+  inset:4px;
+  border-radius:999px;
+  background: rgba(0,120,255,0.9);
+}

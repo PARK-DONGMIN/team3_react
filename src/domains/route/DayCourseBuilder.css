@@ -1,0 +1,520 @@
+/* ✅ 박스 계산 통일(튀어나옴 방지) */
+.dcb-wrap, .dcb-wrap *{ box-sizing:border-box; }
+
+.dcb-wrap{ max-width:1180px; margin:0 auto; padding:22px 16px 40px; }
+
+.dcb-error{
+  background:#fff1f2;border:1px solid #fecdd3;color:#9f1239;
+  padding:10px 12px;border-radius:12px;margin-bottom:12px;font-size:13px;
+}
+
+/* ✅ 오른쪽 컬럼 overflow 방지 위해 minmax(0,1fr) */
+.dcb-grid{
+  display:grid;
+  grid-template-columns: 520px minmax(0, 1fr);
+  gap:14px;
+  align-items:start;
+}
+
+.dcb-left{ display:flex; flex-direction:column; gap:14px; min-width:0; }
+.dcb-card{
+  background:#fff;border:1px solid #eef2f7;border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  overflow:hidden;
+}
+.dcb-card-head{
+  padding:14px 14px 12px; display:flex; justify-content:space-between; align-items:flex-start;
+  border-bottom:1px solid #eef2f7; gap:10px;
+}
+.dcb-title{ font-weight:900; color:#111827; font-size:16px; }
+.dcb-sub{ font-size:12px; color:#6b7280; font-weight:800; margin-left:6px; }
+.dcb-hint{ font-size:12px; color:#ff0000; margin-top:4px; }
+.dcb-head-actions{ display:flex; gap:8px; }
+/* =========================
+   ✅ 1일차/2일차 탭(가로 pill) — 왼쪽 붙는 문제 해결
+========================= */
+.dcb-daytabs{
+  display:flex;
+  gap:10px;
+  padding: 12px 14px 0;   /* ✅ 출발/목적지 칩이랑 같은 여백 */
+  margin: 0;
+  overflow:auto;
+}
+.dcb-daytabs::-webkit-scrollbar{ height: 8px; }
+.dcb-daytabs::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,0.08);
+  border-radius: 999px;
+}
+
+.dcb-daytab{
+  flex: 0 0 auto;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.10);
+  background:#fff;
+  font-weight:900;
+  font-size:13px;
+  cursor:pointer;
+  transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+}
+
+.dcb-daytab:hover{ transform: translateY(-1px); }
+
+.dcb-daytab.on{
+  border-color: rgba(37,99,235,.55);
+  box-shadow: 0 10px 22px rgba(37,99,235,.12);
+}
+
+/* 저장 완료된 day 표시 */
+.dcb-daytab.done::after{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background: rgba(34,197,94,.75);
+  margin-left:8px;
+  display:inline-block;
+}
+
+
+/* ✅ 버튼 텍스트 중앙 정렬 */
+.dcb-btn{
+  padding:10px 10px; border-radius:14px; border:1px solid transparent;
+  font-weight:900; cursor:pointer;
+  transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+}
+.dcb-btn:hover{ transform: translateY(-1px); }
+.dcb-btn:disabled{ opacity:.6; cursor:not-allowed; transform:none; }
+.dcb-btn.primary{ background:#111827; color:#fff; }
+.dcb-btn.ghost{ background:#fff; border-color:#e5e7eb; color:#111827; }
+
+.dcb-pick-tabs{ display:flex; gap:10px; padding:12px 14px 0; }
+
+/* ✅ 칩 텍스트 중앙 정렬 */
+.dcb-chip{
+  padding:10px 12px; border-radius:999px; border:1px solid rgba(0,0,0,.10);
+  background:#fff; cursor:pointer; font-weight:900; font-size:13px;
+  transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+}
+.dcb-chip:hover{ transform: translateY(-1px); }
+.dcb-chip.on{ border-color: rgba(37,99,235,.55); box-shadow: 0 10px 22px rgba(37,99,235,.12); }
+
+.dcb-search{ display:flex; gap:10px; padding:12px 14px 14px; align-items:center; }
+.dcb-searchbox{
+  flex:1; display:flex; align-items:center; gap:8px;
+  border:1px solid #e5e7eb; border-radius:14px; height:46px; padding:0 12px;
+}
+.dcb-searchbox input{ width:100%; border:none; outline:none; background:transparent; font-size:14px; }
+.dcb-searchbox .ic{ opacity:.6; display:inline-flex; align-items:center; justify-content:center; line-height:1; }
+.dcb-searchbox .x{ border:none; background:transparent; cursor:pointer; font-size:18px; opacity:.55; line-height:1; }
+
+.dcb-selected{ padding:0 14px 12px; display:flex; flex-direction:column; gap:10px; }
+.dcb-selected .row{ display:flex; gap:10px; align-items:flex-start; }
+
+/* ✅ 핵심: A/B/W 원 안 글자 “무조건” 정중앙 */
+.dcb-selected .pill{
+  width:30px;
+  height:30px;
+  border-radius:999px;
+
+  display:grid;              /* ✅ grid가 제일 안정적 */
+  place-items:center;        /* ✅ 완전 중앙 */
+  padding:0;
+  margin:0;
+
+  line-height:1;             /* ✅ 폰트 baseline 영향 최소화 */
+  font-weight:900;
+  font-size:12px;
+
+  border:1px solid rgba(0,0,0,.08);
+  flex:0 0 30px;
+}
+.dcb-selected .pill.a{ background:#ecfeff; }
+.dcb-selected .pill.b{ background:#fff7ed; }
+.dcb-selected .pill.w{ background:#f5f3ff; }
+
+.sel{ flex:1; min-width:0; }
+.sel .muted{ margin-top:4px; }
+.muted{ color:#6b7280; font-size:12px; }
+
+/* ✅ mini 버튼도 중앙 */
+.mini{
+  margin-top:6px; padding:8px 10px; border-radius:12px; border:1px solid rgba(0,0,0,.10);
+  background:#fff; cursor:pointer; font-weight:900; font-size:12px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+}
+.mini.on{ border-color: rgba(37,99,235,.55); box-shadow: 0 8px 18px rgba(37,99,235,.10); }
+.mini.ghost{ opacity:.9; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; }
+
+.wp-list{ display:flex; flex-direction:column; gap:8px; width:100%; }
+.wp{
+  border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:10px 10px;
+  display:flex; justify-content:space-between; gap:10px; align-items:flex-start;
+}
+
+.dcb-results{
+  border-top:1px solid #eef2f7;
+  max-height: 320px; overflow:auto;
+  padding:10px 10px 14px;
+}
+.result{
+  width:100%; text-align:left;
+  border:1px solid rgba(0,0,0,.08);
+  background:#fff; border-radius:16px; padding:12px;
+  cursor:pointer; margin-bottom:10px;
+  transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.result:hover{ transform: translateY(-1px); }
+.r-top{ display:flex; justify-content:space-between; gap:8px; }
+.r-name{ font-weight:900; color:#111827; font-size:14px; }
+.r-cat{ font-size:11px; color:#6b7280; white-space:nowrap; }
+.r-addr{ margin-top:6px; font-size:12px; color:#374151; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.r-meta{ margin-top:8px; font-size:12px; color:#4b5563; }
+
+.empty{ padding:18px 10px; }
+.empty-title{ font-weight:900; margin-bottom:6px; }
+.empty-sub{ color:#6b7280; font-size:12px; }
+
+.dcb-poi-quick{
+  display:flex; gap:10px; overflow:auto; padding:12px 14px;
+}
+
+/* ✅ poi 버튼도 중앙 */
+.poi-btn{
+  flex:0 0 auto;
+  padding:10px 12px;border-radius:999px;border:1px solid rgba(0,0,0,.10);
+  background:#fff; cursor:pointer; font-weight:900; font-size:13px;
+  transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  line-height:1;
+}
+.poi-btn:hover{ transform: translateY(-1px); }
+.poi-btn.on{ border-color: rgba(37,99,235,.55); box-shadow:0 10px 22px rgba(37,99,235,.12); }
+.poi-btn:disabled{ opacity:.6; cursor:not-allowed; transform:none; }
+.poi-btn .emo{ font-size:16px; }
+
+.dcb-poi-list{ border-top:1px solid #eef2f7; padding:10px 10px 14px; max-height: 330px; overflow:auto; }
+.poi-item{
+  border:1px solid rgba(0,0,0,.08); border-radius:16px;
+  padding:12px; display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
+  margin-bottom:10px;
+}
+.poi-name{ font-weight:900; color:#111827; }
+.poi-sub{ margin-top:6px; font-size:12px; color:#374151; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.poi-meta{ margin-top:6px; font-size:12px; }
+.poi-actions{ display:flex; gap:8px; align-items:center; }
+
+.dcb-picked{ border-top:1px solid #eef2f7; padding:12px 14px; }
+.picked-title{ font-weight:900; margin-bottom:10px; }
+.picked-list{ display:flex; flex-direction:column; gap:8px; }
+.picked{
+  border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:10px 10px;
+  display:flex; justify-content:space-between; gap:10px; align-items:flex-start;
+}
+
+.dcb-memo-label{ display:block; padding:0 14px; font-weight:900; color:#111827; font-size:13px; }
+.dcb-memo{
+  width:calc(100% - 28px);
+  margin:8px 14px 14px;
+  border:1px solid #e5e7eb; border-radius:14px; padding:12px;
+  min-height: 86px; resize: vertical; outline:none;
+}
+
+.dcb-savebar{
+  padding: 0 14px 14px;
+  display:flex; justify-content:flex-end;
+}
+
+/* Map */
+.dcb-mapbox{
+  position:relative; border-radius:18px; overflow:hidden;
+  border:1px solid #eef2f7; background:#fff; box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+.dcb-map{ width:100%; height: 820px; }
+.dcb-research{
+  position:absolute; top:12px; left:50%; transform:translateX(-50%);
+  padding:10px 14px; border-radius:999px;
+  border:1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
+  font-weight:900; cursor:pointer;
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+}
+
+@media (max-width: 980px){
+  .dcb-grid{ grid-template-columns: 1fr; }
+  .dcb-map{ height: 520px; }
+}
+
+/* =========================
+   ✅ 선택된 출발/도착/경유 UI 리디자인 (override)
+   ========================= */
+
+/* row를 카드처럼 → 왼쪽이 떠 보이는 느낌 제거 + 정렬 딱 맞추기 */
+.dcb-selected .row{
+  border: 1px solid #eef2f7;
+  background: linear-gradient(180deg, #ffffff, #f9fafb);
+  border-radius: 16px;
+  padding: 12px;
+  align-items: center;     /* ✅ 세로 중앙 */
+}
+
+/* A/B/W 원 → 아이콘으로 교체 + 더 예쁜 배지 */
+.dcb-selected .pill{
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+
+  font-size: 0;            /* ✅ 글자(A/B/W) 숨김 */
+  line-height: 1;
+  flex: 0 0 38px;
+}
+
+.dcb-selected .pill::before{
+  font-size: 16px;         /* ✅ 아이콘 크기 */
+  line-height: 1;
+}
+
+/* 출발/도착/경유 색감 + 아이콘 */
+.dcb-selected .pill.a{
+  background: rgba(34,211,238,.18);
+  border-color: rgba(34,211,238,.35);
+  
+}
+.dcb-selected .pill.a::before{ content:"🚴"; }
+
+.dcb-selected .pill.b{
+  background: rgba(251,146,60,.18);
+  border-color: rgba(251,146,60,.35);
+}
+.dcb-selected .pill.b::before{ content:"🏁"; }
+
+.dcb-selected .pill.w{
+  background: rgba(167,139,250,.18);
+  border-color: rgba(167,139,250,.35);
+}
+.dcb-selected .pill.w::before{ content:"➕"; }
+
+/* ✅ 오른쪽이 휑한 거 해결: sel을 2열(grid)로 만들고 삭제 버튼을 오른쪽 끝으로 올리기 */
+.dcb-selected .sel{
+  flex: 1;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title btn"
+    "addr  btn";
+  gap: 4px 12px;
+  align-items: center;
+}
+
+.dcb-selected .sel b{
+  grid-area: title;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dcb-selected .sel > .muted{
+  grid-area: addr;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ✅ 삭제 버튼이 아래로 내려가던 걸 오른쪽 중앙으로 고정 */
+.dcb-selected .sel .mini{
+  grid-area: btn;
+  margin: 0;
+  align-self: center;
+  padding: 8px 10px;
+}
+
+/* ✅ 선택이 아직 없을 때(“출발지를 검색해서…” 같은 문구)도 예쁘게 */
+.dcb-selected .row > .muted{
+  flex: 1;
+  margin: 0;
+}
+
+/* ✅ 경유지 리스트도 버튼 위로 안 내려가게 */
+.dcb-selected .wp{
+  background: #fff;
+  border-color: rgba(0,0,0,.08);
+}
+.dcb-selected .wp .mini{
+  margin-top: 0;
+  align-self: center;
+}
+.dcb-selected .wp > div{
+  min-width: 0;
+}
+
+/* ✅ 배지 아이콘 완전 정중앙 고정 (위로 뜨는 현상 해결) */
+.dcb-selected .pill{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+/* 아이콘을 “텍스트”가 아니라 flex-item처럼 */
+.dcb-selected .pill::before{
+  display:block;
+  line-height:1;
+  margin:0;
+  transform: translateY(0); /* 혹시 이전 보정값 있으면 제거 */
+}
+
+/* 추가로 폰트 영향 줄이기(환경 따라 더 안정적) */
+.dcb-selected .pill{
+  font-size:0;             /* A/B/W 숨김 유지 */
+  padding:0 !important;
+}
+
+/* 지도 위 버튼을 올리려면 mapbox가 relative여야 함 */
+.dcb-mapbox {
+  position: relative;
+}
+
+/* 지도 오른쪽 위 “일정 상세” 버튼 */
+.dcb-map-fab {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 20;
+
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(17, 24, 39, 0.88);
+  color: #fff;
+  font-weight: 900;
+  font-size: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.dcb-map-fab:hover {
+  transform: translateY(-1px);
+}
+
+/* 상태 라벨(저장완료/임시/미완료) */
+.dcb-state {
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(15, 23, 42, 0.06);
+}
+
+.dcb-state.saved {
+  border-color: rgba(34, 197, 94, 0.35);
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.dcb-state.temp {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.12);
+}
+
+/* 범례 */
+.dcb-legend {
+  margin-top: 6px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0.92;
+}
+
+.dcb-legend .item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 상태 점(불) */
+.dcb-light, .dcb-dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  background:#cbd5e1;
+}
+
+.dcb-light.saved, .dcb-dot.saved{
+  background:#22c55e;
+  box-shadow:0 0 0 4px rgba(34,197,94,.18);
+}
+
+.dcb-light.draft, .dcb-dot.draft{
+  background:#f59e0b;
+  box-shadow:0 0 0 4px rgba(245,158,11,.18);
+}
+
+.dcb-light.incomplete, .dcb-dot.incomplete{
+  background:#cbd5e1;
+  box-shadow:0 0 0 4px rgba(203,213,225,.25);
+}
+
+.dcb-state{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:6px;
+}
+
+.dcb-legend{
+  display:flex;
+  gap:14px;
+  margin-top:8px;
+  font-size:12px;
+  color:#64748b;
+}
+.dcb-legend span{ display:flex; align-items:center; gap:6px; }
+
+.dcb-daytab{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}

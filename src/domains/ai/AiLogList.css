@@ -1,0 +1,88 @@
+.ai-log-page {
+  padding: 24px;
+}
+
+.ai-log-page h2 {
+  margin-bottom: 16px;
+}
+
+/* 버튼 영역 */
+.ai-log-actions {
+  margin-bottom: 12px;
+}
+
+.ai-log-actions button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ai-log-actions button.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.ai-log-actions button.fail {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.ai-log-actions button.fail.active {
+  background: #dc2626;
+  color: white;
+}
+
+/* 테이블 */
+.ai-log-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ai-log-table th,
+.ai-log-table td {
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.ai-log-table th {
+  background: #f9fafb;
+}
+
+/* 상태 */
+.status.success {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.status.fail {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.fail-row {
+  background: #fff1f2;
+}
+
+/* 에러 메시지 */
+.error-cell {
+  text-align: left;
+  max-width: 400px;
+}
+
+.error-cell pre {
+  white-space: pre-wrap;
+  font-size: 12px;
+  color: #b91c1c;
+}
+
+/* 빈 상태 */
+.empty {
+  padding: 20px;
+  color: #9ca3af;
+}

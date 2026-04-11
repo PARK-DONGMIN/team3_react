@@ -1,0 +1,91 @@
+/* 화면 기준 가운데 정렬 */
+.mypage-wrapper {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+}
+
+/* 실제 카드 */
+.mypage-card {
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  padding: 36px 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* 제목 */
+.mypage-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.mypage-sub {
+  margin-top: 6px;
+  color: #666;
+  text-align: center;
+}
+
+.brand-highlight {
+  color: #646cffaa;
+  font-weight: 600;
+}
+
+/* 정보 영역 */
+.mypage-info {
+  margin-top: 36px;
+}
+
+/* 한 줄 */
+.mypage-row {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mypage-row span {
+  width: 120px;
+  color: #777;
+  font-weight: 500;
+}
+
+.mypage-row input {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+/* 버튼 */
+.mypage-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: #646cffaa;
+  color: #646cffaa;
+}
+
+.btn-outline:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

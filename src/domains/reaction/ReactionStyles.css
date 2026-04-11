@@ -1,0 +1,172 @@
+/* ================================
+   공통 컨테이너
+================================ */
+.reaction-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 10px 12px;
+}
+
+/* 제목 */
+.reaction-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #222;
+}
+
+
+/* ================================
+   상단 바 (검색 / 정렬)
+================================ */
+.reaction-top-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.reaction-input,
+.reaction-select {
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.reaction-input {
+  flex: 1;
+}
+
+.reaction-btn {
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background: #ddd;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.reaction-btn.primary {
+  background: #4c6ef5;
+  color: white;
+}
+
+.reaction-btn.danger {
+  background: #fa5252;
+  color: white;
+}
+
+.reaction-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+
+/* ================================
+   카드 리스트
+================================ */
+.reaction-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 14px;
+}
+
+.reaction-card {
+  background: white;
+  border-radius: 22px;
+  padding: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 12px 22px rgba(0,0,0,0.05);
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.reaction-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.1);
+}
+
+.reaction-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.reaction-card-info {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.reaction-tag {
+  display: inline-block;
+  background: #eef3ff;
+  color: #4c6ef5;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+
+/* ================================
+   빈 데이터 UI
+================================ */
+.reaction-empty {
+  padding: 60px 0;
+  text-align: center;
+  color: #888;
+  font-size: 15px;
+}
+
+
+/* ================================
+   페이징
+================================ */
+.reaction-pagination {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.reaction-page-btn {
+  padding: 8px 14px;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  margin: 0 3px;
+  cursor: pointer;
+  background: white;
+}
+
+.reaction-page-btn.active {
+  background: #4c6ef5;
+  color: white;
+}
+
+.reaction-page-btn:disabled {
+  background: #eee;
+  cursor: not-allowed;
+}
+
+/* 현재 페이지(선택된 버튼) */
+.reaction-page-btn.active {
+  background: #4c6ef5;
+  color: white;
+  border: none;
+}
+
+/* 기본 버튼 */
+.reaction-page-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 0 3px;
+  background: white;
+  transition: .2s;
+}
+
+.reaction-page-btn:hover {
+  background: #eef2ff;
+}

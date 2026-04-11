@@ -1,0 +1,121 @@
+.ss-wrap{
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:#f6f7fb;
+}
+.ss-card{
+  width: min(560px, 100%);
+  background:#fff;
+  border:1px solid #e8e8ef;
+  border-radius:18px;
+  padding:22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+.ss-brand{
+  font-weight:800;
+  letter-spacing:.5px;
+  font-size:13px;
+  color:#4b5563;
+  margin-bottom:10px;
+}
+.ss-title{
+  font-size:22px;
+  margin:0;
+  color:#111827;
+}
+.ss-sub{
+  margin:8px 0 12px;
+  color:#6b7280;
+  line-height:1.4;
+}
+.ss-badges{ display:flex; gap:8px; margin: 10px 0 14px; flex-wrap:wrap; }
+.ss-badge{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid #e5e7eb;
+  background:#f9fafb;
+  color:#374151;
+}
+.ss-badge.diff.easy{ background:#ecfdf5; border-color:#a7f3d0; color:#065f46; }
+.ss-badge.diff.mid{ background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8; }
+.ss-badge.diff.hard{ background:#fef2f2; border-color:#fecaca; color:#b91c1c; }
+.ss-badge.pub.open{ background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8; }
+.ss-badge.pub.closed{ background:#f3f4f6; border-color:#e5e7eb; color:#6b7280; }
+
+.ss-codebox{
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:14px;
+  background:#fafafa;
+}
+.ss-code-label{
+  font-size:12px;
+  color:#6b7280;
+  margin-bottom:6px;
+}
+.ss-code{
+  font-size:20px;
+  font-weight:800;
+  letter-spacing: 1px;
+  color:#111827;
+  word-break: break-all;
+}
+.ss-code-actions{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+
+.ss-actions{
+  display:flex;
+  gap:10px;
+  margin-top:14px;
+  flex-wrap:wrap;
+}
+
+.ss-btn{
+  border-radius:12px;
+  padding:10px 12px;
+  font-weight:700;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  cursor:pointer;
+}
+.ss-btn.primary{
+  border-color:#2563eb;
+  background:#2563eb;
+  color:#fff;
+}
+.ss-btn.ghost{
+  background:#fff;
+  color:#111827;
+}
+.ss-btn:active{ transform: translateY(1px); }
+
+.ss-foot{
+  margin-top:14px;
+  font-size:12px;
+  color:#6b7280;
+  line-height:1.4;
+}
+
+/* skeleton */
+.ss-skel .ss-skel-title{
+  height:20px; width:70%;
+  background:#eee; border-radius:8px;
+}
+.ss-skel .ss-skel-sub{
+  height:14px; width:90%;
+  background:#eee; border-radius:8px;
+  margin-top:10px;
+}
+.ss-skel .ss-skel-btn{
+  height:42px; width:45%;
+  background:#eee; border-radius:12px;
+  margin-top:14px;
+}
