@@ -1,16 +1,42 @@
-# React + Vite
+# 🚴 Travel Leaf — 프론트엔드
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Travel Leaf 프론트엔드 레포입니다.
+> 전체 프로젝트 소개 및 기술 스택은 백엔드 레포를 참고해주세요.
 
-Currently, two official plugins are available:
+🔗 **백엔드 레포 (메인 README):** [team3](https://github.com/PARK-DONGMIN/team3)
+📅 **개발 기간:** 2025.11.13 ~ 2026.02.12 (13주, 5인 팀 프로젝트)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛠 기술 스택
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| 분류 | 기술 |
+|------|------|
+| Language | HTML5, CSS3, JavaScript (ES6) |
+| Framework | React, Bootstrap |
+| 빌드 도구 | Vite |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ 실행 방법
+
+```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
+
+# 프로덕션 빌드
+npm run build
+```
+
+---
+
+## 👨‍💻 개발자
+
+| 항목 | 내용 |
+|------|------|
+| 이름 | 박동민 |
+| 이메일 | pdm6547@naver.com |
+| GitHub | [@PARK-DONGMIN](https://github.com/PARK-DONGMIN) |
